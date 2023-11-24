@@ -1,0 +1,21 @@
+table, th, td {
+	border-collapse: collapse;
+}
+th {
+	white-space: nowrap;
+}
+td {
+	vertical-align: top;
+}
+.cvshead {
+	color: #600;
+}
+.queued {
+	color: #060;
+}
+strong.highlight {
+	background: #FF0;
+	color: red;
+	font-style: normal;
+	font-weight: bold;
+}

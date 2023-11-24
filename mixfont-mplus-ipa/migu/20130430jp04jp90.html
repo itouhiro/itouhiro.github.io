@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>OpenTypeFont : jp04 / jp90 feature tag test</title>
+<link rel="stylesheet" href="../base.css" type="text/css" />
+<style type="text/css">
+.jp90 {
+  font-feature-settings: "jp90" 1;
+  -moz-font-feature-settings: "jp90" 1;
+  -webkit-font-feature-settings: "jp90" 1;
+  -ms-font-feature-settings: "jp90" 1;
+}
+.jp04 {
+  font-feature-settings: "jp04" 1;
+  -moz-font-feature-settings: "jp04" 1;
+  -webkit-font-feature-settings: "jp04" 1;
+  -ms-font-feature-settings: "jp04" 1;
+}
+mark.jp90:after {content:'jp90'; font-size:40%;}
+mark.jp04:after {content:'jp04'; font-size:40%;}
+p,th,td {font-size:180%;}
+mark {color: rgb(237, 26, 61);}
+th {font-weight:normal; background-color:#eee;}
+tr.even {background-color:#f4f4f4;}
+.note {font-size:100%;}
+</style>
+</head>
+<body>
+<div id="top">
+
+<div id="contents">
+<div class="update">更新 <!-- #BeginDate format:IS1 -->2013-04-30<!-- #EndDate --></div>
+
+
+<h1>OpenTypeFont : jp04 / jp90 feature tag test</h1>
+<p><mark class="jp04">芦</mark>屋に住む<mark class="jp90">芦</mark>田氏。</p>
+<p><mark class="jp04">葛</mark>飾区と<mark class="jp90">葛</mark>城市。</p>
+
+<table>
+<summary>JIS X 0213:2004で変更された例示字形</summary>
+<tr><th>Unicode</th><th>jp04字形</th><th>jp90字形</th></tr>
+<tr class="odd"><th>U+5026</th><td class="jp04">倦</td><td class="jp90">倦</td></tr>
+<tr class="even"><th>U+50C5</th><td class="jp04">僅</td><td class="jp90">僅</td></tr>
+<tr class="odd"><th>U+5132</th><td class="jp04">儲</td><td class="jp90">儲</td></tr>
+<tr class="even"><th>U+514E</th><td class="jp04">兎</td><td class="jp90">兎</td></tr>
+<tr class="odd"><th>U+51A4</th><td class="jp04">冤</td><td class="jp90">冤</td></tr>
+<tr class="even"><th>U+537F</th><td class="jp04">卿</td><td class="jp90">卿</td></tr>
+<tr class="odd"><th>U+53A9</th><td class="jp04">厩</td><td class="jp90">厩</td></tr>
+<tr class="even"><th>U+53C9</th><td class="jp04">叉</td><td class="jp90">叉</td></tr>
+<tr class="odd"><th>U+53DB</th><td class="jp04">叛</td><td class="jp90">叛</td></tr>
+<tr class="even"><th>U+53DF</th><td class="jp04">叟</td><td class="jp90">叟</td></tr>
+<tr class="odd"><th>U+54AC</th><td class="jp04">咬</td><td class="jp90">咬</td></tr>
+<tr class="even"><th>U+54E8</th><td class="jp04">哨</td><td class="jp90">哨</td></tr>
+<tr class="odd"><th>U+55B0</th><td class="jp04">喰</td><td class="jp90">喰</td></tr>
+<tr class="even"><th>U+5632</th><td class="jp04">嘲</td><td class="jp90">嘲</td></tr>
+<tr class="odd"><th>U+5642</th><td class="jp04">噂</td><td class="jp90">噂</td></tr>
+<tr class="even"><th>U+564C</th><td class="jp04">噌</td><td class="jp90">噌</td></tr>
+<tr class="odd"><th>U+56C0</th><td class="jp04">囀</td><td class="jp90">囀</td></tr>
+<tr class="even"><th>U+5835</th><td class="jp04">堵</td><td class="jp90">堵</td></tr>
+<tr class="odd"><th>U+5906</th><td class="jp04">夆</td><td class="jp90">夆</td></tr>
+<tr class="even"><th>U+5A29</th><td class="jp04">娩</td><td class="jp90">娩</td></tr>
+<tr class="odd"><th>U+5C51</th><td class="jp04">屑</td><td class="jp90">屑</td></tr>
+<tr class="even"><th>U+5C60</th><td class="jp04">屠</td><td class="jp90">屠</td></tr>
+<tr class="odd"><th>U+5C62</th><td class="jp04">屢</td><td class="jp90">屢</td></tr>
+<tr class="even"><th>U+5DF7</th><td class="jp04">巷</td><td class="jp90">巷</td></tr>
+<tr class="odd"><th>U+5E96</th><td class="jp04">庖</td><td class="jp90">庖</td></tr>
+<tr class="even"><th>U+5EDF</th><td class="jp04">廟</td><td class="jp90">廟</td></tr>
+<tr class="odd"><th>U+5EFB</th><td class="jp04">廻</td><td class="jp90">廻</td></tr>
+<tr class="even"><th>U+5F98</th><td class="jp04">徘</td><td class="jp90">徘</td></tr>
+<tr class="odd"><th>U+5FBD</th><td class="jp04">徽</td><td class="jp90">徽</td></tr>
+<tr class="even"><th>U+6062</th><td class="jp04">恢</td><td class="jp90">恢</td></tr>
+<tr class="odd"><th>U+609E</th><td class="jp04">悞</td><td class="jp90">悞</td></tr>
+<tr class="even"><th>U+6108</th><td class="jp04">愈</td><td class="jp90">愈</td></tr>
+<tr class="odd"><th>U+6241</th><td class="jp04">扁</td><td class="jp90">扁</td></tr>
+<tr class="even"><th>U+633A</th><td class="jp04">挺</td><td class="jp90">挺</td></tr>
+<tr class="odd"><th>U+633D</th><td class="jp04">挽</td><td class="jp90">挽</td></tr>
+<tr class="even"><th>U+6357</th><td class="jp04">捗</td><td class="jp90">捗</td></tr>
+<tr class="odd"><th>U+6372</th><td class="jp04">捲</td><td class="jp90">捲</td></tr>
+<tr class="even"><th>U+63C3</th><td class="jp04">揃</td><td class="jp90">揃</td></tr>
+<tr class="odd"><th>U+646F</th><td class="jp04">摯</td><td class="jp90">摯</td></tr>
+<tr class="even"><th>U+647A</th><td class="jp04">摺</td><td class="jp90">摺</td></tr>
+<tr class="odd"><th>U+64B0</th><td class="jp04">撰</td><td class="jp90">撰</td></tr>
+<tr class="even"><th>U+64E2</th><td class="jp04">擢</td><td class="jp90">擢</td></tr>
+<tr class="odd"><th>U+65A7</th><td class="jp04">斧</td><td class="jp90">斧</td></tr>
+<tr class="even"><th>U+6666</th><td class="jp04">晦</td><td class="jp90">晦</td></tr>
+<tr class="odd"><th>U+66B5</th><td class="jp04">暵</td><td class="jp90">暵</td></tr>
+<tr class="even"><th>U+6753</th><td class="jp04">杓</td><td class="jp90">杓</td></tr>
+<tr class="odd"><th>U+6756</th><td class="jp04">杖</td><td class="jp90">杖</td></tr>
+<tr class="even"><th>U+6897</th><td class="jp04">梗</td><td class="jp90">梗</td></tr>
+<tr class="odd"><th>U+68D8</th><td class="jp04">棘</td><td class="jp90">棘</td></tr>
+<tr class="even"><th>U+6962</th><td class="jp04">楢</td><td class="jp90">楢</td></tr>
+<tr class="odd"><th>U+696F</th><td class="jp04">楯</td><td class="jp90">楯</td></tr>
+<tr class="even"><th>U+698A</th><td class="jp04">榊</td><td class="jp90">榊</td></tr>
+<tr class="odd"><th>U+6994</th><td class="jp04">榔</td><td class="jp90">榔</td></tr>
+<tr class="even"><th>U+69CC</th><td class="jp04">槌</td><td class="jp90">槌</td></tr>
+<tr class="odd"><th>U+6A0B</th><td class="jp04">樋</td><td class="jp90">樋</td></tr>
+<tr class="even"><th>U+6A3D</th><td class="jp04">樽</td><td class="jp90">樽</td></tr>
+<tr class="odd"><th>U+6A59</th><td class="jp04">橙</td><td class="jp90">橙</td></tr>
+<tr class="even"><th>U+6ADB</th><td class="jp04">櫛</td><td class="jp90">櫛</td></tr>
+<tr class="odd"><th>U+6B4E</th><td class="jp04">歎</td><td class="jp90">歎</td></tr>
+<tr class="even"><th>U+6C72</th><td class="jp04">汲</td><td class="jp90">汲</td></tr>
+<tr class="odd"><th>U+6DEB</th><td class="jp04">淫</td><td class="jp90">淫</td></tr>
+<tr class="even"><th>U+6EA2</th><td class="jp04">溢</td><td class="jp90">溢</td></tr>
+<tr class="odd"><th>U+6EBA</th><td class="jp04">溺</td><td class="jp90">溺</td></tr>
+<tr class="even"><th>U+6F23</th><td class="jp04">漣</td><td class="jp90">漣</td></tr>
+<tr class="odd"><th>U+7015</th><td class="jp04">瀕</td><td class="jp90">瀕</td></tr>
+<tr class="even"><th>U+701E</th><td class="jp04">瀞</td><td class="jp90">瀞</td></tr>
+<tr class="odd"><th>U+7026</th><td class="jp04">瀦</td><td class="jp90">瀦</td></tr>
+<tr class="even"><th>U+7058</th><td class="jp04">灘</td><td class="jp90">灘</td></tr>
+<tr class="odd"><th>U+7078</th><td class="jp04">灸</td><td class="jp90">灸</td></tr>
+<tr class="even"><th>U+707C</th><td class="jp04">灼</td><td class="jp90">灼</td></tr>
+<tr class="odd"><th>U+7149</th><td class="jp04">煉</td><td class="jp90">煉</td></tr>
+<tr class="even"><th>U+714E</th><td class="jp04">煎</td><td class="jp90">煎</td></tr>
+<tr class="odd"><th>U+7152</th><td class="jp04">煒</td><td class="jp90">煒</td></tr>
+<tr class="even"><th>U+717D</th><td class="jp04">煽</td><td class="jp90">煽</td></tr>
+<tr class="odd"><th>U+723A</th><td class="jp04">爺</td><td class="jp90">爺</td></tr>
+<tr class="even"><th>U+724C</th><td class="jp04">牌</td><td class="jp90">牌</td></tr>
+<tr class="odd"><th>U+7259</th><td class="jp04">牙</td><td class="jp90">牙</td></tr>
+<tr class="even"><th>U+727D</th><td class="jp04">牽</td><td class="jp90">牽</td></tr>
+<tr class="odd"><th>U+72E1</th><td class="jp04">狡</td><td class="jp90">狡</td></tr>
+<tr class="even"><th>U+7337</th><td class="jp04">猷</td><td class="jp90">猷</td></tr>
+<tr class="odd"><th>U+7511</th><td class="jp04">甑</td><td class="jp90">甑</td></tr>
+<tr class="even"><th>U+7515</th><td class="jp04">甕</td><td class="jp90">甕</td></tr>
+<tr class="odd"><th>U+7526</th><td class="jp04">甦</td><td class="jp90">甦</td></tr>
+<tr class="even"><th>U+75BC</th><td class="jp04">疼</td><td class="jp90">疼</td></tr>
+<tr class="odd"><th>U+77A5</th><td class="jp04">瞥</td><td class="jp90">瞥</td></tr>
+<tr class="even"><th>U+7941</th><td class="jp04">祁</td><td class="jp90">祁</td></tr>
+<tr class="odd"><th>U+7947</th><td class="jp04">祇</td><td class="jp90">祇</td></tr>
+<tr class="even"><th>U+795F</th><td class="jp04">祟</td><td class="jp90">祟</td></tr>
+<tr class="odd"><th>U+79B0</th><td class="jp04">禰</td><td class="jp90">禰</td></tr>
+<tr class="even"><th>U+79E4</th><td class="jp04">秤</td><td class="jp90">秤</td></tr>
+<tr class="odd"><th>U+7A17</th><td class="jp04">稗</td><td class="jp90">稗</td></tr>
+<tr class="even"><th>U+7A7F</th><td class="jp04">穿</td><td class="jp90">穿</td></tr>
+<tr class="odd"><th>U+7AC8</th><td class="jp04">竈</td><td class="jp90">竈</td></tr>
+<tr class="even"><th>U+7B08</th><td class="jp04">笈</td><td class="jp90">笈</td></tr>
+<tr class="odd"><th>U+7B75</th><td class="jp04">筵</td><td class="jp90">筵</td></tr>
+<tr class="even"><th>U+7BAD</th><td class="jp04">箭</td><td class="jp90">箭</td></tr>
+<tr class="odd"><th>U+7BB8</th><td class="jp04">箸</td><td class="jp90">箸</td></tr>
+<tr class="even"><th>U+7BC7</th><td class="jp04">篇</td><td class="jp90">篇</td></tr>
+<tr class="odd"><th>U+7BDD</th><td class="jp04">篝</td><td class="jp90">篝</td></tr>
+<tr class="even"><th>U+7C3E</th><td class="jp04">簾</td><td class="jp90">簾</td></tr>
+<tr class="odd"><th>U+7C7E</th><td class="jp04">籾</td><td class="jp90">籾</td></tr>
+<tr class="even"><th>U+7C82</th><td class="jp04">粂</td><td class="jp90">粂</td></tr>
+<tr class="odd"><th>U+7FEB</th><td class="jp04">翫</td><td class="jp90">翫</td></tr>
+<tr class="even"><th>U+7FF0</th><td class="jp04">翰</td><td class="jp90">翰</td></tr>
+<tr class="odd"><th>U+8171</th><td class="jp04">腱</td><td class="jp90">腱</td></tr>
+<tr class="even"><th>U+817F</th><td class="jp04">腿</td><td class="jp90">腿</td></tr>
+<tr class="odd"><th>U+818F</th><td class="jp04">膏</td><td class="jp90">膏</td></tr>
+<tr class="even"><th>U+8258</th><td class="jp04">艘</td><td class="jp90">艘</td></tr>
+<tr class="odd"><th>U+8292</th><td class="jp04">芒</td><td class="jp90">芒</td></tr>
+<tr class="even"><th>U+82A6</th><td class="jp04">芦</td><td class="jp90">芦</td></tr>
+<tr class="odd"><th>U+8328</th><td class="jp04">茨</td><td class="jp90">茨</td></tr>
+<tr class="even"><th>U+845B</th><td class="jp04">葛</td><td class="jp90">葛</td></tr>
+<tr class="odd"><th>U+84EC</th><td class="jp04">蓬</td><td class="jp90">蓬</td></tr>
+<tr class="even"><th>U+8511</th><td class="jp04">蔑</td><td class="jp90">蔑</td></tr>
+<tr class="odd"><th>U+853D</th><td class="jp04">蔽</td><td class="jp90">蔽</td></tr>
+<tr class="even"><th>U+85A9</th><td class="jp04">薩</td><td class="jp90">薩</td></tr>
+<tr class="odd"><th>U+85AF</th><td class="jp04">薯</td><td class="jp90">薯</td></tr>
+<tr class="even"><th>U+85F7</th><td class="jp04">藷</td><td class="jp90">藷</td></tr>
+<tr class="odd"><th>U+8654</th><td class="jp04">虔</td><td class="jp90">虔</td></tr>
+<tr class="even"><th>U+86F8</th><td class="jp04">蛸</td><td class="jp90">蛸</td></tr>
+<tr class="odd"><th>U+8703</th><td class="jp04">蜃</td><td class="jp90">蜃</td></tr>
+<tr class="even"><th>U+8755</th><td class="jp04">蝕</td><td class="jp90">蝕</td></tr>
+<tr class="odd"><th>U+87F9</th><td class="jp04">蟹</td><td class="jp90">蟹</td></tr>
+<tr class="even"><th>U+8805</th><td class="jp04">蠅</td><td class="jp90">蠅</td></tr>
+<tr class="odd"><th>U+8956</th><td class="jp04">襖</td><td class="jp90">襖</td></tr>
+<tr class="even"><th>U+8A0A</th><td class="jp04">訊</td><td class="jp90">訊</td></tr>
+<tr class="odd"><th>U+8A1D</th><td class="jp04">訝</td><td class="jp90">訝</td></tr>
+<tr class="even"><th>U+8A3B</th><td class="jp04">註</td><td class="jp90">註</td></tr>
+<tr class="odd"><th>U+8A6E</th><td class="jp04">詮</td><td class="jp90">詮</td></tr>
+<tr class="even"><th>U+8AB9</th><td class="jp04">誹</td><td class="jp90">誹</td></tr>
+<tr class="odd"><th>U+8AFA</th><td class="jp04">諺</td><td class="jp90">諺</td></tr>
+<tr class="even"><th>U+8B0E</th><td class="jp04">謎</td><td class="jp90">謎</td></tr>
+<tr class="odd"><th>U+8B2C</th><td class="jp04">謬</td><td class="jp90">謬</td></tr>
+<tr class="even"><th>U+8B7F</th><td class="jp04">譿</td><td class="jp90">譿</td></tr>
+<tr class="odd"><th>U+8C79</th><td class="jp04">豹</td><td class="jp90">豹</td></tr>
+<tr class="even"><th>U+8CED</th><td class="jp04">賭</td><td class="jp90">賭</td></tr>
+<tr class="odd"><th>U+8FBB</th><td class="jp04">辻</td><td class="jp90">辻</td></tr>
+<tr class="even"><th>U+8FBF</th><td class="jp04">辿</td><td class="jp90">辿</td></tr>
+<tr class="odd"><th>U+8FC2</th><td class="jp04">迂</td><td class="jp90">迂</td></tr>
+<tr class="even"><th>U+8FC4</th><td class="jp04">迄</td><td class="jp90">迄</td></tr>
+<tr class="odd"><th>U+8FE6</th><td class="jp04">迦</td><td class="jp90">迦</td></tr>
+<tr class="even"><th>U+9017</th><td class="jp04">逗</td><td class="jp90">逗</td></tr>
+<tr class="odd"><th>U+9019</th><td class="jp04">這</td><td class="jp90">這</td></tr>
+<tr class="even"><th>U+903C</th><td class="jp04">逼</td><td class="jp90">逼</td></tr>
+<tr class="odd"><th>U+9041</th><td class="jp04">遁</td><td class="jp90">遁</td></tr>
+<tr class="even"><th>U+905C</th><td class="jp04">遜</td><td class="jp90">遜</td></tr>
+<tr class="odd"><th>U+9061</th><td class="jp04">遡</td><td class="jp90">遡</td></tr>
+<tr class="even"><th>U+912D</th><td class="jp04">鄭</td><td class="jp90">鄭</td></tr>
+<tr class="odd"><th>U+914B</th><td class="jp04">酋</td><td class="jp90">酋</td></tr>
+<tr class="even"><th>U+91DC</th><td class="jp04">釜</td><td class="jp90">釜</td></tr>
+<tr class="odd"><th>U+9306</th><td class="jp04">錆</td><td class="jp90">錆</td></tr>
+<tr class="even"><th>U+9375</th><td class="jp04">鍵</td><td class="jp90">鍵</td></tr>
+<tr class="odd"><th>U+939A</th><td class="jp04">鎚</td><td class="jp90">鎚</td></tr>
+<tr class="even"><th>U+9453</th><td class="jp04">鑓</td><td class="jp90">鑓</td></tr>
+<tr class="odd"><th>U+9699</th><td class="jp04">隙</td><td class="jp90">隙</td></tr>
+<tr class="even"><th>U+9744</th><td class="jp04">靄</td><td class="jp90">靄</td></tr>
+<tr class="odd"><th>U+9771</th><td class="jp04">靱</td><td class="jp90">靱</td></tr>
+<tr class="even"><th>U+9784</th><td class="jp04">鞄</td><td class="jp90">鞄</td></tr>
+<tr class="odd"><th>U+9798</th><td class="jp04">鞘</td><td class="jp90">鞘</td></tr>
+<tr class="even"><th>U+97AD</th><td class="jp04">鞭</td><td class="jp90">鞭</td></tr>
+<tr class="odd"><th>U+98F4</th><td class="jp04">飴</td><td class="jp90">飴</td></tr>
+<tr class="even"><th>U+9905</th><td class="jp04">餅</td><td class="jp90">餅</td></tr>
+<tr class="odd"><th>U+990C</th><td class="jp04">餌</td><td class="jp90">餌</td></tr>
+<tr class="even"><th>U+9910</th><td class="jp04">餐</td><td class="jp90">餐</td></tr>
+<tr class="odd"><th>U+9957</th><td class="jp04">饗</td><td class="jp90">饗</td></tr>
+<tr class="even"><th>U+99C1</th><td class="jp04">駁</td><td class="jp90">駁</td></tr>
+<tr class="odd"><th>U+9A19</th><td class="jp04">騙</td><td class="jp90">騙</td></tr>
+<tr class="even"><th>U+9A4A</th><td class="jp04">驊</td><td class="jp90">驊</td></tr>
+<tr class="odd"><th>U+9BAB</th><td class="jp04">鮫</td><td class="jp90">鮫</td></tr>
+<tr class="even"><th>U+9BD6</th><td class="jp04">鯖</td><td class="jp90">鯖</td></tr>
+<tr class="odd"><th>U+9C2F</th><td class="jp04">鰯</td><td class="jp90">鰯</td></tr>
+<tr class="even"><th>U+9C52</th><td class="jp04">鱒</td><td class="jp90">鱒</td></tr>
+<tr class="odd"><th>U+9D09</th><td class="jp04">鴉</td><td class="jp90">鴉</td></tr>
+<tr class="even"><th>U+9D60</th><td class="jp04">鵠</td><td class="jp90">鵠</td></tr>
+<tr class="odd"><th>U+9022</th><td class="jp04">逢</td><td class="jp90">逢</td></tr>
+<tr class="even"><th>U+FA20</th><td class="jp04">蘒</td><td class="jp90">蘒</td></tr>
+<tr class="odd"><th>U+FA40</th><td class="jp04">懲</td><td class="jp90">懲</td></tr>
+</table>
+
+<table>
+<summary>JIS X 0213:2004で追加された例示字形 （jp90が存在しないため、jp90とjp04が同じ）</summary>
+<tr class="even"><th>U+4FF1</th><td class="jp04">俱</td><td class="jp90">俱</td></tr>
+<tr class="odd"><th>U+525D</th><td class="jp04">剝</td><td class="jp90">剝</td></tr>
+<tr class="even"><th>U+541E</th><td class="jp04">吞</td><td class="jp90">吞</td></tr>
+<tr class="odd"><th>U+5653</th><td class="jp04">噓</td><td class="jp90">噓</td></tr>
+<tr class="even"><th>U+59F8</th><td class="jp04">姸</td><td class="jp90">姸</td></tr>
+<tr class="odd"><th>U+5C5B</th><td class="jp04">屛</td><td class="jp90">屛</td></tr>
+<tr class="even"><th>U+5E77</th><td class="jp04">幷</td><td class="jp90">幷</td></tr>
+<tr class="odd"><th>U+7626</th><td class="jp04">瘦</td><td class="jp90">瘦</td></tr>
+<tr class="even"><th>U+7E6B</th><td class="jp04">繫</td><td class="jp90">繫</td></tr>
+<tr class="odd"><th>U+20B9F</th><td class="jp04">叱</td><td class="jp90">叱</td></tr>
+</table>
+
+
+<p class="note">font feature tagの対応状況は<a href="http://caniuse.com/font-feature">When can I use Font feature settings?</a>を参照。</p>
+<p class="note">作成の参考にしたページ</p>
+<ul>
+<li><a href="http://mandel59.github.io/mplus_samples/jp04.html">http://mandel59.github.io/mplus_samples/jp04.html</a></li>
+<li><a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-121114-2.html">M+ LOG : JIS2004 例示字形</a></li>
+</ul>
+
+<nav><a href="/">index</a></nav>
+
+<!--/#contents--></div>
+<!--/#top--></div>
+
+</body>
+</html>

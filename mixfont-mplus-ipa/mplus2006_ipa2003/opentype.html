@@ -1,0 +1,170 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=euc-jp">
+  <title>M+ と IPAフォントの合成フォント : OpenType版</title>
+  <link href="default.css" rel="stylesheet" type="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+</head>
+<body>
+<div id="content">
+
+<div id="header">
+<h1>M+ と IPAフォントの合成フォント</h1>
+</div><!--header-->
+
+<div id="main">
+
+
+
+
+<h2 id="top">OpenType版</h2>
+
+<h3 id="description">説明</h3>
+<div class="section">
+  <p>Windows XP/2000 で ここの TrueTypeフォントを使うと
+  文字の表示が薄くなるね、といわれます。<br>
+  OpenType 形式のフォントならば文字が濃く表示されるようです。
+  そこで、OpenType 形式に変換してみました。
+  </p>
+
+  <h4 id="diff_otf_ttf">TrueType 版との違い</h4>
+  <div class="section">
+  <ul>
+  <li>等幅フォントは含まれていません。<br>
+  OpenType版 等幅フォントを作ってみたところ、
+  表示がくずれる (全角文字も半角幅で表示されて重なる) 
+  という不具合があって、正常使用できなかったためです。</li>
+  </ul>
+  </div><!-- section -->
+
+  <h4 id="caution">注意点</h4>
+  <div class="section">
+  <ul>
+  <li>OpenType版のフォント名は TrueType版と同じなので、入れかえる前に同名のフォントを削除して、そのあとでインストールしてください。</li>
+  <li>InternetExplorer6.0 の表示フォントに指定できませんでした。(しかし、IEで まずTrueTypeフォントを表示フォントに指定してから、TrueTypeフォント削除→OpenTypeインストールすると、表示できました)。<br>
+  <a href="http://www.mozilla-japan.org/products/firefox/">Firefox</a>1.5 だと表示フォントに指定できました。</li>
+  </ul>
+  </div><!-- section -->
+
+</div><!-- section -->
+
+
+<h3 id="download">ダウンロード</h3>
+<div class="section">
+<p>このフォントはどなたでも無料でお使いになれます。</p>
+<p>
+IPAフォントの再配布条件に従い、 オープンプリンティングシステム用 HP Vector Driverに同梱して配布しています。改変前のIPAフォントも含んでいます。
+</p>
+<p>
+<!--a href="http://prdownloads.sourceforge.jp/mix-mplus-ipa/20215/mixfont-mplus-ipa-OpenType-20060520.tar.bz2"--><del>mixfont-mplus-ipa-OpenType-20060520.tar.bz2<!--/a--> (16.2 MB)</del>
+</p>
+<p>
+Windows で tar.bz2 形式のファイルを展開するには、<a href="http://www.vector.co.jp/soft/win95/util/se107748.html" title="Lhaz(Windows95/98/Me/ユーティリティ)">Lhaz</a> などを使ってください。<!--(Lhaplus は展開エラーが出るので使わないでください)-->
+</p>
+<p>
+フォントそれぞれの説明は、<a href="preview.html">フォント一覧</a> をどうぞ。ライセンスは <a href="download.html#license">TrueType 版と同じ</a>です。
+</p>
+</div><!-- section -->
+
+<h3 id="screenshot">スクリーンショット</h3>
+
+<h4 id="screen_winxp">Windows XP</h4>
+<table class="screenshot">
+<tr>
+  <td><a href="0519-size-xp-ttf-cleartype.png"><img class="screenshot" src="t-0519-size-xp-ttf-cleartype.png" width="160" height="100" alt="Windows XP TrueType+ClearType"></a>
+  <td class="space"></td>
+  <td><a href="0519-size-xp-ttf-antialias.png"><img class="screenshot" src="t-0519-size-xp-ttf-antialias.png" width="160" height="100" alt="Windows XP TrueType+NormalAntiAlias"></a>
+</tr>
+<tr>
+  <td colspan="2"><p class="caption">Windows XP で、TrueTypeを ClearType表示したものです。</p></td>
+  <td><p class="caption">Windows XP で、TrueTypeを標準アンチエイリアス表示。</p></td>
+</tr>
+<tr>
+  <td><a href="0519-size-xp-otf.png"><img class="screenshot" src="t-0519-size-xp-otf.png" width="160" height="100" alt="Windows XP OpenType"></a>
+  <td class="space"></td>
+  <td></td>
+</tr>
+<tr>
+  <td><p class="caption">Windows XP で、OpenType を表示したものです。</p></td>
+</tr>
+</table>
+
+<table class="screenshot">
+<tr>
+  <td><a href="0519-web-xp-ttf-cleartype.png"><img class="screenshot" src="t-0519-web-xp-ttf-cleartype.png" width="160" height="100" alt="Windows XP TrueType+ClearType"></a>
+  <td class="space"></td>
+  <td><a href="0519-web-xp-ttf-antialias.png"><img class="screenshot" src="t-0519-web-xp-ttf-antialias.png" width="160" height="100" alt="Windows XP TrueType+NormalAntiAlias"></a>
+</tr>
+<tr>
+  <td colspan="2"><p class="caption">Windows XP + TrueType &amp; ClearType。</p></td>
+  <td><p class="caption">Windows XP + TrueType &amp; 標準アンチエイリアス。</p></td>
+</tr>
+<tr>
+  <td><a href="0519-web-xp-otf.png"><img class="screenshot" src="t-0519-web-xp-otf.png" width="160" height="100" alt="Windows XP OpenType"></a>
+  <td class="space"></td>
+  <td></td>
+</tr>
+<tr>
+  <td><p class="caption">Windows XP + OpenType。</p></td>
+</tr>
+</table>
+
+
+
+
+<h4 id="screen_win2000">Windows 2000</h4>
+<table class="screenshot">
+<tr>
+  <td><a href="0519-size-2000-ttf.png"><img class="screenshot" src="t-0519-size-2000-ttf.png" width="160" height="100" alt="Windows 2000 TrueType+NormalAntiAlias"></a>
+  <td class="space"></td>
+  <td><a href="0519-size-2000-otf.png"><img class="screenshot" src="t-0519-size-2000-otf.png" width="160" height="100" alt="Windows 2000 OpenType"></a>
+</tr>
+<tr>
+  <td colspan="2"><p class="caption">Windows 2000 で、TrueType を標準アンチエイリアス表示。</p></td>
+  <td><p class="caption">Windows 2000 + OpenType。<br>
+  小さいサイズだと、ちょっとギザギザしてるかなあ……。</p></td>
+</tr>
+</table>
+
+
+<h4 id="screen_linux">Linux</h4>
+<table class="screenshot">
+<tr>
+  <td><a href="0519-size-debian-ttf.png"><img class="screenshot" src="t-0519-size-debian-ttf.png" width="160" height="100" alt="Debian GNU/Linux testing(etch) TrueType"></a>
+  <td class="space"></td>
+  <td><a href="0519-size-debian-otf.png"><img class="screenshot" src="t-0519-size-debian-otf.png" width="160" height="100" alt="Debian GNU/Linux testing(etch) OpenType"></a>
+</tr>
+<tr>
+  <td colspan="2"><p class="caption">Debian GNU/Linux testing(etch) で、TrueType を表示。<br>なぜか 9px より小さなサイズでは表示できませんでした。 (Firefox の 'Minimal font size' は None にしてあります)
+  </p></td>
+  <td><p class="caption">Debian GNU/Linux testing(etch) + OpenType。<br>
+Linux では、TrueType も OpenType も見た感じほぼ同じです。</p></td>
+</tr>
+</table>
+
+
+
+</div><!--main-->
+
+
+
+<div id="menu">
+<ul>
+  <li><a href="./">TOP/最新情報</a></li>
+  <li><a href="preview.html">フォント一覧</a></li>
+  <li><a href="download.html">ダウンロード</a></li>
+  <li><a href="screenshot.html">スクリーンショット</a></li>
+  <li><!--a href="opentype.html"-->OpenType版<!--/a--></li>
+</ul>
+</div><!--menu-->
+
+<div id="footer">
+<p>最終更新日: 2006-05-20 (公開日: 2006-05-20)<br>
+このページの筆者: itouh＠<a href="http://ai11.net/">ai11</a>
+</p>
+</div><!--footer-->
+
+</div><!--content-->
+</body>
+</html>

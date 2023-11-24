@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>フォント表示テスト</title>
+<style type="text/css">
+div.fontbox {border:solid 1px #f93;border-width:1px 0 0 0;padding:5px;margin-bottom:2em;}
+p {margin:0;padding:0;}
+p.fontname {color:#73A6C3;font-size:12px;margin-left:9px;font-family:"MigMix 1P","Migu 1P";}
+p.sampletext {font-size:18px;margin-left:18px;}
+</style>
+</head><body><h1>フォント表示テスト</h1>
+<script type="text/javascript">//<![CDATA[
+function puttest(fmly, str, str2) {
+    var fontname = fmly;
+    document.write('<p class="fontname">' +  fontname + '</p><div class="fontbox"><p class="sampletext" style="font-family:\'' + fmly + '\', \'Adobe Blank\';">'+str+'<strong>' + str + '</strong><br/>' +str2+ ' <strong>'+str2+'</strong></p></div>')
+}
+var fmly=['MigMix 1P','MigMix 2P','MigMix 1M','MigMix 2M','Migu 1P','Migu 1C','Migu 1M','Migu 2M','Migu 2DS','Migu 1VS','Migu 1BT']; //family
+for(var i=0; i<fmly.length; i++){
+    var str = 'Webでコンピュータの世界が広がります。';
+    var str2 = 'ABCDEFG abcdefg 234679 80O 1Il|! 5S :; ., _-~ )}]';
+    //var str = 'Webでコンピュータの世界が広がります。ｲﾗｯｼｬｰｲ♪<br/>ABCDEFG abcdefg 2345679 80OQ Il1|! :; ., _-~ )}]';
+    //var str = 'iPhone7 1920x1080p HD画質<br />ABCDEFG abcdefg 2345679 80OQ Il1|! :; ., _-~ )}]<br />きょうもマーケットプレイスで<br />匂兵部卿　紅梅　竹河　橋姫　椎本　総角　早蕨　宿木';
+    //var str = '1080p Illegal マーケットプレイス １９２０年';
+    //var str = 'えぞずし　てさばき　コロネ　3BMgy';
+    puttest(fmly[i], str, str2);
+}
+//]]>
+</script></body></html>

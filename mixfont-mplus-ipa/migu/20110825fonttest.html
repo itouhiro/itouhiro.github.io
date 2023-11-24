@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>フォント表示テスト</title>
+<style type="text/css">
+div.fontbox {border:solid 1px #73A6C3;padding:5px;margin-bottom:2em;width:490px;}
+p {margin:0;padding:0;}
+p.fontname {color:#73A6C3;font-size:12px;margin-left:9px;font-family:"MigMix 1P";}
+p.sampletext {font-size:26px;margin-left:18px;}
+</style>
+</head><body><h1>フォント表示テスト</h1>
+<script type="text/javascript">//<![CDATA[
+function puttest(fmly, wgt, str) {
+    var fontname = fmly + ' ' + wgt;
+    if(wgt == 'regular'){ wgt = 'normal'; }
+    document.write('<div class="fontbox"><p class="fontname">' +  fontname + '</p><p class="sampletext" style="font-family:\'' + fmly + '\';font-weight:' + wgt + '";>' + str + '</p></div>')
+}
+
+//var fmly=['MigMix 1P','MigMix 2P','MigMix 1M','MigMix 2M','Migu 1P','Migu 1C','Migu 1M','Migu 2DS']; //family
+var fmly=['MigMix 1P','Migu 1P','Migu 1M','Migu 1VS']; //family
+
+for(var i=0; i<fmly.length; i++){
+    //var str = 'フー 択一<br/>スニ 高二<br/>トロ 人口<br/>ハタ 今夕<br/>ルカ 体力<br/>イエ 人工<br/>サヘ 都へ<br/>レベ 飛べ<br/>クペ くぺ';
+    var str = 'イカ　体力<br/>イエ　人工<br/>トロ　人口<br/>ロー　択一<br/>ウニ　高二<br/>ハタ　七夕';
+    puttest(fmly[i], 'regular', str);
+    puttest(fmly[i], 'bold', str);
+}
+//]]>
+</script></body></html>

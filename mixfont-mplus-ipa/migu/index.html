@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Miguフォント : M+とIPAの合成フォント</title>
+<meta http-equiv="Content-style-Type" content="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="../base.css" type="text/css" />
+</head>
+<body>
+
+<div id="top">
+
+<div id="header">
+<p class="logo"><img src="../images/logo.svg" width="237" height="42" alt="M+とIPAの合成フォント" /></p>
+<!--/#header--></div>
+
+<div id="menu">
+<ul>
+<li><a href="../">HOME</a></li>
+<li><a href="../migmix/">MIGMIX</a></li>
+<li><a href="../migu/" class="on">MIGU</a></li>
+<li><a href="../mplus/">M+</a></li>
+<li><a href="../changelog.html">CHANGES</a></li>
+</ul>
+<!--/#menu--></div>
+
+
+<div id="contents">
+
+<h1 id="introduce">Migu（ミグ）フォント<!-- とは --></h1>
+<p>Miguフォントは、以下の特徴があります。</p>
+<ul>
+<li>M<sup>+</sup>フォントに<strong>改変を加えて、文字を判別しやすく</strong>した</li>
+<li>IPAゴシックを合成して、漢字をJIS第1水準～第4水準まで持つ</li>
+</ul>
+
+<p>
+<a href="#feature">どこが違うの？</a><br />
+<a href="#license">ライセンス</a>
+</p>
+
+
+
+<h2 id="download">ダウンロード</h2>
+
+<h3 class="fontname" id="migu1p">Migu 1P</h3>
+<p>
+<img class="fontsample" src="sample_migu1p.svg" alt="" /><br/>
+<a href="https://github.com/itouhiro/mixfont-mplus-ipa/releases/download/v2020.0307/migu-1p-20200307.zip">migu-1p-20200307.zip</a> (約4MB) のダウンロード
+</p>
+<p>
+フォント名の「P」は Proportinal（プロポーショナル）の略です。<!-- プロポーショナルというのは、ここでは半角英数字の幅が文字ごとに違う、という意味です。 -->
+<br/>
+MigMix 1Pをもとに「半濁点が大きい」などを改変しました。詳しくは下記の説明をご覧ください。</p>
+<!--
+<p>MigMix 1Pとの違いは：</p>
+<ul>
+<li>半濁点が大きい</li>
+<li>Il（大文字アイ・小文字エル）の区別</li>
+<li>カ力 エ工 ロ口 ー一 ニ二（カタカナ・漢字）へヘ（ひらがな・カタカナ）の区別</li>
+<li>&#x301c;&#xff5e;（波ダッシュ・全角チルダ）の区別</li>
+<li>JIS2004漢字字形</li>
+</ul>
+-->
+
+<h3 class="fontname" id="migu1c">Migu 1C</h3>
+<p>
+<img class="fontsample" src="sample_migu1c.svg" alt="" /><br/>
+<a href="https://github.com/itouhiro/mixfont-mplus-ipa/releases/download/v2020.0307/migu-1c-20200307.zip">migu-1c-20200307.zip</a> (約4MB) のダウンロード
+</p>
+<p>フォント名の「C」は Clear の略です。英数字のデザインが Migu 1Pとは少し異なります。
+<br/>
+上のMigu 1Pと似た感じですが、「全角ひらがな・カタカナもプロポーショナル」などの特徴があります。</p>
+<!--
+<p>上のMigu 1Pの特徴は、このMigu 1Cにも当てはまります。Migu 1Cはさらに：</p>
+<ul>
+<li>全角ひらがな・カタカナもプロポーショナル</li>
+<li>0O（数字ゼロ・大文字オー）の区別</li>
+<li>1Il（数字１・大文字アイ・小文字エル）の区別</li>
+</ul>
+-->
+
+<h3 class="fontname" id="migu1m">Migu 1M</h3>
+<p>
+<img class="fontsample" src="sample_migu1m.svg" alt="" /><br/>
+<a href="https://github.com/itouhiro/mixfont-mplus-ipa/releases/download/v2020.0307/migu-1m-20200307.zip">migu-1m-20200307.zip</a> (約4MB) のダウンロード
+</p>
+<p>フォント名の「M」は Monospace（等幅）の略です。<a href="http://save.sys.t.u-tokyo.ac.jp/%7Eyusa/fonts/ricty.html" target="_blank">Rictyフォント</a>の合成にこのフォントが使われています。</p>
+<!--
+<p>MigMix 1Mとの違いは：</p>
+<ul>
+<li>半濁点が大きい</li>
+<li>カ力 エ工 ロ口 ー一 ニ二（カタカナ・漢字）へヘ（ひらがな・カタカナ）の区別</li>
+<li>&#x301c;&#xff5e;（波ダッシュ・全角チルダ）の区別</li>
+<li>JIS2004漢字字形</li>
+<li>数学記号や一部のギリシャ・ロシア文字が全角</li>
+</ul>
+-->
+
+
+<h3 class="fontname" id="migu2m">Migu 2M</h3>
+<p>
+<img class="fontsample" src="sample_migu2m.svg" alt="" /><br/>
+<a href="https://github.com/itouhiro/mixfont-mplus-ipa/releases/download/v2023.1123/migu-2m-20231123.zip">migu-2m-20231123.zip</a> (約4MB) のダウンロード
+</p>
+<p>MacOSのHTMLエディタ <a href="http://panic.com/jp/coda/" target="_blank">Coda2</a> に搭載されました。
+<br/>
+このMigu 2Mは、MigMix 2Mとの違いを控えめにしてあります。半濁点を大きくしていないなどがMigMix 1Mとの違いです。</p>
+<!--
+<p>このMigu 2Mは、MigMix 2Mとの違いを控えめにしてあります。MigMix 2Mとの違いは：</p>
+<ul>
+<li>カ力 エ工 ロ口 ニ二（カタカナ・漢字）の区別</li>
+<li>JIS2004対応</li>
+<li>数学記号や一部のギリシャ・ロシア文字が全角</li>
+</ul>
+<p>控えめにした点（MiguMix 2Mと同じ点）は：</p>
+<ul>
+<li>半濁点が大きくない</li>
+<li>長音記号 ー は「筆押さえ」がなく真っ直ぐ</li>
+<li>&#x301c;&#xff5e;（波ダッシュ・全角チルダ）は同じ形</li>
+</ul>
+-->
+<div class="fontname_separator"/></div>
+
+
+<div class="download"><p class="note"><!--過去バージョンは <a href="http://osdn.jp/projects/mix-mplus-ipa/releases/p11859">[リリースファイル一覧 migu]</a> から取得できます。<br /-->
+バージョンごとの変更点は<a href="../changelog.html">変更履歴</a>をご覧ください。</p></div>
+
+
+
+<h2 id="feature">どこが違うの？</h2>
+<table class="compare">
+<tr>
+<th class="top">特徴</th>
+<th class="invalid">MigMix 1P/2P</th>
+<th>Migu 1P</th>
+<th>Migu 1C</th>
+<th class="invalid">MigMix 1M/2M</th>
+<th>Migu 1M</th>
+<th>Migu 2M</th>
+</tr>
+
+<tr>
+<th class="feature"><a href="#monoprop">等幅 or プロポーショナル（P）</a></th>
+<td class="invalid">P</td>
+<td>P</td>
+<td>P</td>
+<td class="invalid">等幅</td>
+<td>等幅</td>
+<td>等幅</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#kanaprop">全角ひらがな・カタカナも<br />  プロポーショナル</a></th>
+<td class="invalid">－</td>
+<td>－</td>
+<td>●</td>
+<td class="invalid">－</td>
+<td>－</td>
+<td>－</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#lineheight">行間</a>（縦の高さ　多いほうが縦幅大きい）</th>
+<td class="invalid">1485</td>
+<td>1485</td>
+<td>1485</td>
+<td class="invalid">1485</td>
+<td>1110</td>
+<td>1110</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#semivowel">半濁点が大きい</a></th>
+<td class="invalid">－</td>
+<td>●</td>
+<td>●</td>
+<td class="invalid">－</td>
+<td>●</td>
+<td>－</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#0O">0O（数字ゼロ・大文字オー）の区別</a></th>
+<td class="invalid">－</td>
+<td>－</td>
+<td>●</td>
+<td class="invalid">○</td>
+<td>●</td>
+<td>○</td>
+</tr>
+<tr>
+<th class="feature"><a href="#1Il">1Il（数字１・大文字アイ・小文字エル）の区別</a></th>
+<td class="invalid">－</td>
+<td>○</td>
+<td>●</td>
+<td class="invalid">●</td>
+<td>●</td>
+<td>●</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#similarkanakanji">カ力 エ工 ロ口 ー一 ニ二（カタカナ・漢字）へヘ（ひらがな・カタカナ）の区別</a></th>
+<td class="invalid">－</td>
+<td>●</td>
+<td>●</td>
+<td class="invalid">－</td>
+<td>●</td>
+<td>○</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#wavedash">&#x301c;&#xff5e;（波ダッシュ・全角チルダ）の区別</a></th>
+<td class="invalid">－</td>
+<td>●</td>
+<td>●</td>
+<td class="invalid">－</td>
+<td>●</td>
+<td>－</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#mathsign">数学記号や一部のギリシャ・ロシア文字が全角</a></th>
+<td class="invalid">－</td>
+<td>－</td>
+<td>－</td>
+<td class="invalid">－</td>
+<td>●</td>
+<td>●</td>
+</tr>
+
+<!--
+<tr>
+<th class="feature"><a href="#vertical">縦書き</a></th>
+<td class="invalid">－</td>
+<td>－</td>
+<td>－</td>
+<td class="invalid">●</td>
+<td>●</td>
+<td>●</td>
+</tr>
+-->
+
+<tr>
+<th class="feature"><a href="#jis2004">JIS2004漢字字形</a></th>
+<td class="invalid">－</td>
+<td>●</td>
+<td>●</td>
+<td class="invalid">－</td>
+<td>●</td>
+<td>●</td>
+</tr>
+<!--/#compare--></table>
+<p class="note">－○●の意味：－は非対応、○はある程度対応、●はフル対応
+<!--<br />このページでダウンロード不可なフォントは色を薄く表示しています。--></p>
+
+
+<h2 id="monoprop">等幅 or プロポーショナル</h2>
+<p class="note">半角英数字の、次の文字までの距離が文字ごとに異なると、プロポーショナル（可変幅）フォントと呼びます。距離が一定なら「等幅（とうはば）」フォントと呼びます。</p>
+<p><img class="fontsample" src="feature_monospace_proportional.svg" alt="Windows,Mac,Linux対応"/></p>
+
+<h2 id="kanaprop">全角ひらがな・カタカナもプロポーショナル</h2>
+<p class="note">プロポーショナルフォントの中にも、全角ひらがな・カタカナが可変幅なものと等幅があります。Migu 1C<!--/1VS/2DS-->では全角ひらがな・全角カタカナ・役物（「」『』【】・の7文字）を可変幅にしました。</p>
+<p><img class="fontsample" src="feature_kana_proportional.svg" alt="フォントとは、文字をコンピュータを使って"/></p>
+
+<h2 id="lineheight">行間（縦の高さ）</h2>
+<p class="note">行間は、適度に広いと文を読みやすくなります。しかし等幅フォントが使われる分野のひとつ、プログラミングでは「行間をせまくして、画面に より多くの行を表示できる」ほうが好まれます。</p>
+<p><img class="fontsample" src="feature_lineheight.svg" alt="Facebook（フェイスブック）は、Facebook, Inc.の提供する、SNS（ソーシャル・ネットワーキング・サービス）である。 (http://ja.wikipedia.org/wiki/Facebook)"/></p>
+
+<h2 id="semivowel">半濁点が大きい</h2>
+<p class="note">半濁点（ぱぴぷぺぽパピプペポ の右上の円）を大きくして、濁点と判別しやすくしています。</p>
+<p><img class="fontsample" src="feature_semivoicedmark.svg" alt="ページの読み込みを高速化し、Web アプリケーションやオンラインゲームのパフォーマンスを強化しました。美しいタイポグラフィ、タッチスクリーンインタフェース (http://www.mozilla.jp/firefox/faq/)"/></p>
+
+<h2 id="0O">0O（数字ゼロ・大文字オー）の区別</h2>
+<p class="note">MigMix 1M/2Mは<!-- 半角ゼロにスラッシュ（Migu 2Mは半角ゼロにドット）がありますが、 -->全角ゼロにスラッシュがありません。<br />
+Migu 1C/1M<!--/1VS-->には全角ゼロにもスラッシュがあり、半角ゼロのスラッシュは線幅を細く目立ちにくくしました。</p>
+<p><img class="fontsample" src="feature_0O.svg" alt="docomo with series（ドコモウィズシリーズ） Xperia SX SO-05Dをご紹介します (https://www.google.com/search?q=SO-05D)"/></p>
+
+
+<h2 id="1Il">1Il（数字１・大文字アイ・小文字エル）の区別</h2>
+<p class="note">MigMix 1Pは大文字アイ・小文字エルがどちらも縦棒ですが、Migu 1P<!--/1VS/2DS-->には大文字アイに横棒つけました。<!--いてますが、小文字エルがまっすぐな縦棒なので大文字アイとまちがえる可能性もあります（下の画像の $git
+  tag -l だけだと「アイかもしれない」って思いますよね）Migu 1C/1M/2Mには小文字エルに、特徴的な横棒がついているので、まちがえずに済みます。--><br />Migu 1Cは さらに小文字エルに特徴的な横棒がついています。MigMix 1M/2Mは最初から横棒付きです。</p>
+<p><img class="fontsample" src="feature_1Il.svg" alt="10. Illustrations"/></p>
+
+<h2 id="similarkanakanji">カ力 エ工 ロ口 ー一 ニ二（カタカナ・漢字）へヘ（ひらがな・カタカナ）の区別</h2>
+<p class="note">もともと字形は同じですが、区別できるなら してみたい。Migu 2M<!--/2DS-->では長音（音引き ー）とひらがなの「へ」は未変更です。</p>
+<p><img class="fontsample" src="feature_similar.svg" alt="イカ 体力 イエ 人工 トロ 人口 キー 高一 ウニ 高二 へり ヘリ ハタ 七夕"/></p>
+
+<h2 id="wavedash">&#x301c;&#xff5e;（波ダッシュ・全角チルダ）の区別</h2>
+<p class="note">全角ニョロ記号は、iOS/Mac/Linuxでは波ダッシュ（WAVE DASH,U+301C）を使い、Windowsでは全角チルダ（FULLWIDTH TILDE,U+FF5E）を使う慣習です。MigMixや多くの日本語フォントではこの2つに同じ字形を割り当てていますが、Miguフォントでは区別できるようにしました（ただしMigu 2Mはどちらも波ダッシュの形）。</p>
+<p><img class="fontsample" src="feature_wavedash.svg" alt=""/></p>
+
+<h2 id="mathsign">数学記号や一部のギリシャ・ロシア文字が全角</h2>
+<p class="note">過去（Shift_JISの時代）の日本語フォントは、×÷±などの数学記号、αβなど一部のギリシャ文字、φЯなど一部のロシア文字が全角でした。MigMix 1M/2Mではそれらが半角になっているのですが、Migu 1M/2Mで全角に戻しています。</p>
+<p><img class="fontsample" src="feature_greek.svg" alt="±×÷§√‰†‡¶№"/></p>
+
+<!--
+<h2 id="vertical">縦書き</h2>
+<p class="note">等幅フォントのみ、縦書きに対応しています。<br />
+  プロポーショナルフォントは、MS Word 2010やLibreOffice 3.6なら縦書きになりますが、Adobe Illustrator CS4等で縦書きがおかしくなるので、縦書き非対応とします。</p>
+<p><img src="../images/vertical.png" width="455" height="358" /></p>
+-->
+
+<h2 id="jis2004">JIS2004漢字字形</h2>
+<p class="note">MigMixフォントは、<!-- a href="http://mplus-fonts.osdn.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-120412-2.html">M<sup>+</sup>作者coz氏の意向</a>で、M<sup>+</sup>フォントと同じく -->日本の文字規格 JIS X 0213:2004（通称 <a href="https://www.google.com/search?q=JIS2004" target="_blank">JIS2004</a>）より前の規格(JIS90)を採用しています。<br/>
+Miguフォントは、JIS2004の漢字字形に準拠するようにしています。<a href="https://www.google.com/search?q=jp90タグ" target="_blank">jp90タグ</a>によるJIS90字形への置き換えにも対応します。
+<p><img class="fontsample" src="feature_jis2004.svg" alt="「捗る」のつくりは「歩」じゃないことが判明　芦屋　葛城　祇園で逢う　巷の噂　大晦日　鯖"/></p>
+
+
+<h2 id="recommend">使い分け</h2>
+<p>たくさん種類がありますが、オススメを挙げます。</p>
+<ul>
+<li>「テキストエディター表示」に <a href="#migu1m">Migu 1M</a></li>
+<li>「印刷物やプレゼン資料」に <a href="../migmix/#migmix1p">MigMix 1P</a></li>
+<li>「ウェブブラウザー表示」はお好みで、MigMix 1P や <a href="#migu1c">Migu 1C</a>などをどうぞ。</li>
+</ul>
+<p>まずはそれを試してみて、そのあと余裕があれば別のを試してみるのもよいですね。</p>
+
+
+
+<h2 id="screenshot">スクリーンショット</h2>
+<ul class="gallery240">
+<li><a href="20130430-migu1p-win7.png" rel="ltbx" title="フォント： Migu 1P (Windows 7 ＋ MacType)"><img src="t-20130430-migu1p-win7.png" width="240" height="135" /></a>
+  <p>フォント： Migu 1P<br />
+  環境： Windows 7 ＋ <a href="https://www.google.com/search?q=mactype" target="_blank">MacType</a><br />
+元ページ：<a href="http://ja.wikipedia.org" target="_blank">Wikipedia</a></p></li>
+<li><a href="20130430-migu1c-migu1m-ubuntu1204.png" rel="ltbx" title="フォント： Migu 1C, Migu 1M (Linux)"><img src="t-20130430-migu1c-migu1m-ubuntu1204.png" width="240" height="135" /></a>
+  <p>フォント： Migu 1C, Migu 1M<br />
+  環境： Linux (Ubuntu 12.04)<br />元ページ：<a href="http://ja.wikipedia.org/wiki/JQuery" target="_blank">Wikipedia</a></p></li>
+<!--/.gallery240--></ul>
+
+
+
+<h2 id="install">インストール</h2>
+<p><!--フォントのインストール方法は <a href="http://osdn.jp/projects/mix-mplus-ipa/howto/install">mixfont-mplus-ipaのインストール方法</a> を参考にしてください。
+<br /-->
+動作は、Windows 7,XP と Linux (Ubuntu 12.04)で確認しました。</p>
+
+<h2 id="license">ライセンス</h2>
+<p>上記のフォントは以下のライセンスに準じます。</p>
+<ul>
+<!--li>M<sup>+</sup> (<a href="migmix/LICENSE_E.txt">LICENSE_E</a>)</li-->
+<li>IPAフォント (<a href="../migmix/IPA_Font_License_Agreement_v1.0.txt">IPA_Font_License_Agreement_v1.0.txt</a>)</li>
+</ul>
+<p class="license">
+Copyright (C) 2002-2019 M+ FONTS PROJECT<br/>
+Copyright(c) Information-technology Promotion Agency, Japan (IPA), 2003-2011.
+</p> 
+<p class="note">
+このフォントをIPAフォントに置き換える場合は、
+<a href="http://ossipedia.ipa.go.jp/ipafont/">IPAフォントのダウンロード</a>ページで「IPAゴシック（Ver.003.03）」を
+入手してください。
+派生プログラム（MigMix/Miguフォント）を作成する過程でフォント開発プログラム（FontForge）によって作成された追加のファイルであって派生プログラムをさらに加工するにあたって利用できるファイル
+（*.sfdファイル）は、<a href="https://github.com/itouhiro/mixfont-mplus-ipa/tree/main/mplus_outline_fonts/mig.d/sfd.d" target="_blank">配布サイト</a>から入手できます。
+</p>
+
+
+<h2 id="build">ビルド方法</h2>
+<p>ソースはすべて<a href="https://github.com/itouhiro/mixfont-mplus-ipa/tree/main/mplus_outline_fonts/mig.d" target="_blank">Repository</a>に公開しています。<br />
+ビルド方法は、<a href="https://github.com/itouhiro/mixfont-mplus-ipa/blob/main/mplus_outline_fonts/mig.d/BUILD.txt" target="_blank">BUILD.txt</a>をごらんください。</p>
+
+
+<h2 id="fontname">フォント名</h2>
+<p> 「M+ と IPA Gothic を合成して、ユニバーサルデザイン（Universal Design）を取り入れたフォント」を略して Migu としました。</p>
+<p><a href="http://www.google.com/search?hl=ja&amp;q=UDフォント" target="_blank">ユニバーサルデザイン（UD）フォント</a>は、フォントベンダー各社が2008年頃から提供しはじめたフォントで、要件がいくつかあります。Miguフォントではそのうちの「半濁点と濁点の判読性」という要件を満たしています。</p>
+
+
+
+
+
+<h2 id="script">スクリプトで合成する必要のあるMigu</h2>
+<p>以下のフォントは、上で紹介したMiguフォントに、さらに欧文フォントを合成しています。</p>
+<p>欧文フォントのライセンスがIPAフォントライセンスと競合するので、TrueTypeフォントとしては配布できません。合成スクリプトを配布するので、使用するには個人で合成してください。合成スクリプトの使い方は <a href="http://d.hatena.ne.jp/itouhiro/20121031" target="_blank">http://d.hatena.ne.jp/itouhiro/20121031</a> を参考にしてください。</p>
+
+
+<h3 class="fontname" id="migu1vs">Migu 1VS</h3>
+<p>
+<img class="fontsample" src="sample_migu1vs.svg" alt="" /><br/>
+<del>migu-1vs-20200307.zip (約4.5MB) のダウンロード</del><br />
+IPAフォントライセンスの制限により、ダウンロードできません。
+</p>
+<p>欧文フォント DejaVu Sans Condensed とMigu 1Cを組み合わせました。英文向きです。<a href="http://ja.wikipedia.org/wiki/DejaVu%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88" target="_blank">Dejavuフォント</a>は外国文字を多数収録しているので、ほかのMiguフォントより約3200文字多く収録。ユニコードアスキーアートもある程度表示可能。
+<!--
+% fontforge -script mig.d/scripts/count_glyph.pe migu-1p-20121016/migu-1p-regular.ttf | wc -l
+13433
+% fontforge -script mig.d/scripts/count_glyph.pe migu-1vs-20121016/migu-1vs-regular.ttf | wc -l
+16671
+% % fontforge -script mig.d/scripts/count_glyph.pe migu-2ds-regular.ttf > count-migu-2ds.txt; wc -l count-migu-2ds.txt
+13443
+--></p>
+
+
+<h3 class="fontname" id="migu1bt">Migu 1BT</h3>
+<p>
+<img class="fontsample" src="sample_migu1bt.svg" alt="" /><br/>
+<del>migu-1bt-20200307.zip (約4MB) のダウンロード</del><br />
+IPAフォントライセンスの制限により、ダウンロードできません。
+</p>
+<p>欧文フォント<a href="https://www.google.com/fonts/specimen/Bitter" target="_blank">Bitter</a>とMigu 1Cを組み合わせました。英文向きです。</p>
+
+
+<h3 class="fontname" id="migu2ds">Migu 2DS</h3>
+<p>
+<img class="fontsample" src="sample_migu2ds.svg" alt="" /><br/>
+<del>migu-2ds-20231123.zip (約4MB) のダウンロード</del><br />
+IPAフォントライセンスの制限により、ダウンロードできません。
+</p>
+<p>欧文フォント <a href="http://www.google.com/fonts/specimen/Droid+Sans" target="_blank">Droid Sans</a> とMigMix 2Pを組み合わせました。半角英数字が横にせまく、英文を読むのに向いています。</p>
+
+<div class="fontname_separator"/></div>
+
+<table class="compare">
+<tr>
+<th class="top">特徴</th>
+<th>Migu 1VS</th>
+<th>Migu 1BT</th>
+<th>Migu 2DS</th>
+</tr>
+
+<tr>
+<th class="feature"><a href="#monoprop">等幅 or プロポーショナル（P）</a></th>
+<td>P</td>
+<td>P</td>
+<td>P</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#kanaprop">全角ひらがな・カタカナも<br />  プロポーショナル</a></th>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#lineheight">行間</a>（縦の高さ　多いほうが縦幅大きい）</th>
+<td>1485<!--1649--></td>
+<td>1485</td>
+<td>1485</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#semivowel">半濁点が大きい</a></th>
+<td>●</td>
+<td>●</td>
+<td>－</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#0O">0O（数字ゼロ・大文字オー）の区別</a></th>
+<td>●</td>
+<td>●</td>
+<td>－</td>
+</tr>
+<tr>
+<th class="feature"><a href="#1Il">1Il（数字１・大文字アイ・小文字エル）の区別</a></th>
+<td>○ ※1</td>
+<td>●</td>
+<td>○ ※1</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#similarkanakanji">カ力 エ工 ロ口 ー一 ニ二（カタカナ・漢字）へヘ（ひらがな・カタカナ）の区別</a></th>
+<td>●</td>
+<td>●</td>
+<td>○ ※2</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#wavedash">&#x301c;&#xff5e;（波ダッシュ・全角チルダ）の区別</a></th>
+<td>●</td>
+<td>●</td>
+<td>－</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#mathsign">数学記号や一部のギリシャ・ロシア文字が全角</a></th>
+<td>－</td>
+<td>－</td>
+<td>－</td>
+</tr>
+
+<tr>
+<th class="feature"><a href="#jis2004">JIS2004漢字字形</a></th>
+<td>●</td>
+<td>●</td>
+<td>●</td>
+</tr>
+<!--/#compare--></table>
+<p class="note">
+※1 大文字アイには元の欧文フォントに無かった横棒を追加してあります。しかし小文字エルは縦棒のままです。<br/>
+※2 Migu 2DSの長音（音引き ー）とひらがなの「へ」はMigMix 2Pから変更なし。<br/>
+－○●の意味：－は非対応、○はある程度対応、●はフル対応<br/>
+<!--<br />このページでダウンロード不可なフォントは色を薄く表示しています。--></p>
+
+
+
+
+
+
+<!--/#contents--></div>
+
+<div id="totop">
+<a href="#top">ページのトップへ戻る</a>
+<!--/#totop--></div>
+
+<div id="footer">
+<span class="update">更新 <!-- #BeginDate format:IS1 -->2023-11-25<!-- #EndDate --></span>
+<address>&copy; itouhiro</address>
+<!--/#footer--></div>
+
+<!--/#top--></div>
+</body>
+</html>

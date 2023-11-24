@@ -1,0 +1,742 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>変更履歴 : M+とIPAの合成フォント</title>
+<meta http-equiv="Content-style-Type" content="text/css" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="base.css" type="text/css" />
+</head>
+<body>
+
+<div id="top">
+
+<div id="header">
+<p class="logo"><img src="images/logo.svg" width="237" height="42" alt="M+とIPAの合成フォント" /></p>
+<!--/#header--></div>
+
+<div id="menu">
+<ul>
+<li><a href="./">HOME</a></li>
+<li><a href="migmix/">MIGMIX</a></li>
+<li><a href="migu/">MIGU</a></li>
+<li><a href="mplus/">M+</a></li>
+<li><a href="changelog.html" class="on">CHANGES</a></li>
+</ul>
+<!--/#menu--></div>
+
+
+<div id="contents">
+
+<h1 id="changelog">変更履歴</h1>
+
+<h3 id="c2023-11-23">2023-11-23</h3>
+<ul>
+<li>MigMix
+<ul>
+<li>[MigMix 2P/2M] 半角 ｺ の幅を修正。詳細は <a href="https://twitter.com/itouhiro/status/1536166700210884608">Migu 2Mフォントの半角`ｺ`がおかしい</a> を参照。</a></li>
+</ul>
+</li>
+<li>Migu
+<ul>
+<li>[Migu 2P/2M] 半角 ｺ の幅を修正。</li>
+</ul>
+</li>
+<li>M<sup>+</sup>
+<ul>
+<li>[Circle M<sup>+</sup> 2p/2m]  半角 ｺ の幅を修正。
+<li>[Clamp 2p/2m] 半角 ｺ の幅を修正。</a>
+</ul>
+</li>
+</ul>
+
+<h3 id="c2020-04-15">2020-04-15</h3>
+<ul>
+<li>M<sup>+</sup>
+<ul>
+<li>[Clamp] ウェイトについて修正。前回の種類 w1, w2, w3, w4, w5 を W1, W3, W4, W5, W7 に変えた。<a href="https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A9%E3%83%B3%E3%83%88" target="_blank">[Wikipedia:フォント＞ウェイト (太字フォント・細字フォント)]</a>に従い、もとのM<sup>+</sup>フォントのweight class数値（<code>100 Thin, 300 Light,..</code>）と数値表記（<code>W1, W3,..</code>）を関連させた。</li>
+</ul>
+</li>
+</ul>
+
+<h3 id="c2020-03-07">2020-03-07</h3>
+<ul>
+<li>MigMix
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 063aに同期。</li>
+<li>TrueTypeヒント情報を付与しないようにした。Windows環境のGoogleChromeやVisualStudioCodeで表示品質向上のため。</li>
+</ul>
+</li>
+<li>Migu
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 063aに同期。</li>
+<li>TrueTypeヒント情報を付与しないようにした。Windows環境のGoogleChromeやVisualStudioCodeで表示品質向上のため。</li>
+</ul>
+</li>
+<li>M<sup>+</sup>
+<ul>
+<li>[Circle M<sup>+</sup>] 7ウェイト提供するようにした。これまではRegular／Boldの2ウェイト提供だったが、Adobe製デザインアプリ（Photoshop, Illustrator等）で7ウェイト選択できるようにした。　※等幅フォントは5ウェイト。</li>
+<li>[Clamp] 新規追加。Circle M<sup>+</sup>と基本同じものだが、Windows環境やプレゼンアプリでも使いやすくするためにフォント名とウェイトの扱いを変えた。2ウェイト（標準／太字）×5種類（w1, w2, w3, w4, w5）あるため、極細体や極太体を使いやすくなる。　※等幅フォントはw1, w2, w3の3種類。</li>
+</ul>
+</li>
+</ul>
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>ArchLinux</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td><a href="http://itouhiro.hatenablog.com/entry/20150224/font">FontForge 20141230 ＋ 日本語縦書きパッチ</a></td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+<td><a href="http://mplus-fonts.osdn.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a>  <a href="http://mplus-fonts.osdn.jp/cgi-bin/blosxom.cgi/2019/04/24#mplus_fonts-190423" target="_blank">M<sup>+</sup> TESTFLIGHT 063a </a><br/>
+  <a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.03  </td>
+</tr>
+</table>
+
+<h3 id="c2015-07-12">2015-07-12</h3>
+<ul>
+<li>MigMix
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 060に同期。</li>
+<li>FontForge日本語パッチ版とM<sup>+</sup>のスクリプト改善により、縦書き改善。</li>
+<li>スクリプトを置き換え。縦書きのために、フォントの合成方法を変更し、peスクリプトからpythonスクリプトに置き換え。</li>
+</ul>
+</li>
+<li>Migu
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 060に同期。</li>
+<li>FontForge日本語パッチ版とM<sup>+</sup>のスクリプト改善により、縦書き改善。</li>
+<li>[Migu 1P/1C/1M] 波ダッシュ（U+301C &#x301c;）と全角チルダ（U+FF5E &#xff5e;）の字形を変更。U+301CはM<sup>+</sup>の字形に戻し、U+FF5Eは新規作成。詳細は<a href="https://osdn.jp/projects/mix-mplus-ipa/forums/9259/30313/">「U+FF5E「&#xff5e;」と U+301C「&#x301c;」等の区別について」</a>を参照。<br/>
+<img class="fontsample" src="migu/20150712wavedash.svg" alt=""/>
+</li>
+<li>[Migu 1P/1C/1M] カタカナ「ヘベペ」の字形を変更。詳細は<a href="https://osdn.jp/projects/mix-mplus-ipa/forums/9259/34400/">ひらがな「へ」、カタカナ「ヘ」の区別について</a>を参照。<br/>
+<img class="fontsample" src="migu/20150712diffkana.svg" alt=""/>
+</li>
+<li>[Migu 1P/1C/1M] 「ぱぴぷぺぽ パピプペポ」の半濁点を、Regularは少し大きくした。これまでオリジナルの130％だったが135％にした。Boldはこれまでどおり130％。</li>
+<li>[Migu 1M/2M] EMダッシュ（U+2014 &#x2014;）を半角幅から全角幅に変更。詳細は<a href="https://osdn.jp/projects/mix-mplus-ipa/forums/9259/34530/">「Migu1Mで「—」「−」が半角になる」</a>を参照。</li>
+<li>[Migu 1M/2M] EMダッシュ（U+2014 &#x2014;）とHORIZONTAL BAR（U+2015 &#x2015;）の縦書きを修正。詳細は<a href="https://osdn.jp/projects/mix-mplus-ipa/forums/9259/36592/">「HORIZONTAL BAR ― の縦書き」</a>を参照。</li>
+<li>[Migu 1P/1C] 引用符 U+2018 &#x2018;  U+2019 &#x2019;  U+201C &#x201C;  U+201D &#x201d; の字形を変更。詳細は<a href="https://osdn.jp/projects/mix-mplus-ipa/forums/9259/34857/">「Migu 1C の引用符を Migu 1M と同じように」</a>を参照。</li>
+<li>[Migu 1P/1C] 半角アルファベットの大文字アイ I の字形を多少細め（小文字エルと同じ太さ）に修正。</li>
+<li>[Migu 1C] 半角アルファベットの小文字エル l の字形を修正。より直立感。</li>
+<li>[Migu 1VS] 半角アルファベットの小文字エル l は横棒を外し、元の一直線の棒に戻した。</li>
+<li>[Migu 2DS] 波ダッシュ（U+301C &#x301c;）と全角チルダ（U+FF5E &#xff5e;）を同じ字形にした。</li>
+<li>スクリプトを一部置き換え。FontForgeに用意された合成機能（MergeFonts）を使うと縦書きがうまくいかないので、フォントの合成方法を変更し、peスクリプトからpythonスクリプトに置き換え。</li>
+<li>スクリプトを修正。JIS2004字形採用をよりシンプルな方法に変更。</li>
+</ul>
+</li>
+</ul>
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>ArchLinux, Windows 7</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td><a href="http://itouhiro.hatenablog.com/entry/20150224/font">FontForge 20141230 ＋ 日本語縦書きパッチ</a><br/>Adobe Illustrator CS6</td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+<td><a href="http://mplus-fonts.osdn.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a>  <a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-150626-2.html" target="_blank">M<sup>+</sup> TESTFLIGHT 060</a><br/>
+  <a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.03  </td>
+</tr>
+</table>
+
+<h3 id="c2013-06-17">2013-06-17</h3>
+<ul>
+<li>MigMix
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 056（2013-06-17T12:30+09:00のCVS repository）に同期。</li>
+<li>IPAゴシックの「￣」の字形(U+FFE3)を修正。詳細は<a href="http://sourceforge.jp/forum/forum.php?thread_id=34115&forum_id=9259">mixfont-mplus-ipaフォーラム：Migu 1Mで「￣￣￣￣￣￣」が空白になる</a>を参照。</li>
+<li><a href="http://sourceforge.jp/forum/forum.php?thread_id=34112&forum_id=9259">mixfont-mplus-ipaフォーラム：U+02E9 と U+02E5 の合字について</a>に対応。</li>
+</ul>
+</li>
+<li>Migu
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 056（2013-06-17T12:30+09:00のCVS repository）に同期。</li>
+<li>IPAゴシックの「￣」の字形(U+FFE3)を修正。詳細は<a href="http://sourceforge.jp/forum/forum.php?thread_id=34115&forum_id=9259">mixfont-mplus-ipaフォーラム：Migu 1Mで「￣￣￣￣￣￣」が空白になる</a>を参照。</li>
+<li><a href="http://sourceforge.jp/forum/forum.php?thread_id=34112&forum_id=9259">mixfont-mplus-ipaフォーラム：U+02E9 と U+02E5 の合字について</a>に対応。</li>
+</li>
+</ul>
+<li>報告されている問題
+<ul>
+<li>「<a href="http://sourceforge.jp/forum/forum.php?thread_id=29547&forum_id=9259">MacOS XのWord2008/2011</a>」は再現できる環境を持たないため未確認。</li>
+</ul>
+</li>
+</ul>
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>Debian 6, Windows 7</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td>FontForge 0.0.20100501-5</td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+<td><a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a>  <a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-130606-2.html" target="_blank">M<sup>+</sup> TESTFLIGHT 056</a><br/>
+  <a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.03  </td>
+</tr>
+</table>
+
+<h3 id="c2013-05-07">2013-05-07</h3>
+<ul>
+<li>Migu
+<ul>
+<li>[Migu 1C] 半角アルファベットの小文字エル l のside bearingを修正。</li>
+</ul>
+</li>
+</ul>
+
+<h3 id="c2013-04-30">2013-04-30</h3>
+<ul>
+<li>MigMix
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 055に同期。IPAゴシックは変更なし。</li>
+</ul>
+</li>
+<li>Migu
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 055（2013-04-30T08:10+09:00のCVS repository）に同期。IPAゴシックは変更なし。</li>
+<li>JIS2004（日本の文字規格 JIS X 0213:2004）の漢字字形に準拠した。'jp90'タグによるJP90字形への置き換えに対応。IVSによる字形置き換えには非対応。検証HTML: <a href="migu/20130430jp04jp90.html">20130430jp04jp90.html</a></li>
+<li>「カ力 エ工 ロ口 ー一 ニ二」の、カタカナではなくて、漢字の字形を修正。以前は明朝体のような処理をしていたが、ゴシック体に合う角ばった処理にした。<br/><img src="migu/20130430similarkanji.png" width="320" height="120" alt="体力 キー 高一 人工 人口 高二" /></li>
+<li>[Migu 1C] 半角アルファベットの小文字エル l の横棒の形を修正。以前はMigu 1Mの小文字エルの部分をそのまま持ってきていたが横に長いので、横棒を短くした。</li>
+<li>[Migu 1VS] 半角アルファベットの小文字エル l に横棒をつけて数字1や大文字Iと判別しやすくした。</li>
+<li>[Migu 1BT] 新規追加。欧文フォントBitterとMigu 1Cを合成。Bitterの字形の変更点：半角ゼロ 0 に斜めスラッシュを追加。小文字エル l の左下端の横棒を削除。ハイフンマイナス - の横の長さを微妙に伸ばす。チルダ ~ の上下振幅を激しくする。コロン : とセミコロン ; の文字前後のスペース（Side Bearing）を空ける。</li>
+</ul>
+</li>
+<li>報告されている問題
+<ul>
+<li>「<a href="http://sourceforge.jp/forum/forum.php?thread_id=29547&forum_id=9259">MacOS XのWord2008/2011</a>」は再現できる環境を持たないため未確認。</li>
+</ul>
+</li>
+</ul>
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>Debian 6, Windows 7</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td>FontForge 0.0.20100501-5<br />
+    Adobe Illustrator CS4/CS5</td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+<td><a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a>  <a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-130311-2.html" target="_blank">TESTFLIGHT 055</a><br/>
+  <a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.03  </td>
+</tr>
+</table>
+
+
+<h3 id="c2012-10-30">2012-10-30</h3>
+<ul>
+<li>MigMix
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 052に同期。IPAゴシックは変更なし。</li>
+<li>グリフ '.notdef' はこれまで存在したが、削除した。Windows7のＭＳ ゴシックとメイリオが notdef のglyphを持っていなかったので同じにした。</li>
+<li>フォントのバージョンをこれまでの <code>0.20121031</code> 形式から <code>2012.1031</code> 形式に変更した。理由は「<a href="http://partners.adobe.com/public/developer/opentype/index_name.html#enc4" target="_blank">バージョン文字列は <code>"Version &lt;65535未満の数字&gt;.&lt;65535未満の数字&gt;"</code> 形式</a>」と決まっていたため。</li>
+<li>スクリプトの構造を変更。<a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/download/" target="_blank">M<sup>+</sup> TESTFLIGHT</a>として公開されているttfファイルと合成するようにした。→svgファイルを扱わずに済むので生成が簡単になった。</li>
+</ul>
+</li>
+<li>Migu
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 052（2012-10-30のCVS repository）に同期。IPAゴシックは変更なし。</li>
+<li>半濁点（全角ひらがな・全角カタカナ・半角カタカナ）をこれまでより若干小さくした。これまではMigMixの約140％の大きさだったが130％にした。<br />
+  <img src="migu/20121030semivoicedmark.png" alt="はひふへほばびぶべぼぱぴぷぺぽハヒフヘホバビブベボパピプペポ" width="559" height="203" /></li>
+<li>半角カタカナの、濁点を少し小さくする。長音（音引き　ー）の形も修正。</li>
+<li>漢字の「三」「夕」の文字をM<sup>+</sup>オリジナルに戻した。</li>
+<li>[Migu 1C] 半角・全角のゼロ 0０ にスラッシュを入れて大文字Oと判別しやすくした。半角アルファベットの小文字エル l に横棒をつけて数字1や大文字Iと判別しやすくした。半角小文字エル、大文字アイ以外のbearings,kernings情報をオリジナルのM<sup>+</sup> 1cと同じに戻した。</li>
+<li>[Migu 2M] WAVE DASH(U+301C)の字形をFULLWIDTH TILDE(U+FF5E)と同じにした。「<a href="http://sourceforge.jp/forum/message.php?msg_id=65458">U+FF5E「～」と U+301C「～」等の区別について</a>」の要望に対応。</li>
+<!--li>[Migu 1M] M<sup>+</sup> 1mの矢印記号は これまで半角だったのが全角になったので、Migu 1Mで矢印を全角にしていた処理を外した。</li-->
+<li>[Migu 1P/1C] M<sup>+</sup> 1p/1cの矢印記号のうちの2つ <a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-120913-2.html" target="_blank">↓↑ は全角より狭い横幅に最近変更された</a>が、Migu 1P/1Cでは全角にしている。</li>
+<li>フォントのバージョンをこれまでの <code>0.20121031</code> 形式から <code>2012.1031</code> 形式に変更した。理由は「<a href="http://partners.adobe.com/public/developer/opentype/index_name.html#enc4" target="_blank">バージョン文字列は <code>"Version &lt;65535未満の数字&gt;.&lt;65535未満の数字&gt;"</code> 形式</a>」と決まっていたため。</li>
+<li>スクリプトの構造を変更。M<sup>+</sup> Fontsプロジェクトのスクリプト変更に追従し、一部をpythonスクリプトに書き換え。生成途中にできる「IPA合成前のファイル」をsfdからttf形式に変更してフォント名も変更。Migu 1VS/2DSを合成しやすく変更。</li>
+</ul>
+</li>
+<li>M<sup>+</sup>
+<ul>
+<li>Miguフォント生成中に一時的に作る、IPAフォント合成前の加工済みM<sup>+</sup>フォントを、Circle M<sup>+</sup>という名前で配布することにした。デザインはMiguフォントと同じだが、IPAフォント合成前なので漢字がたりない。しかしIPAライセンスが混ざらないので、扱いが より自由に。</li>
+</ul>
+</li>
+<li>報告されている問題
+<ul>
+<li>「<a href="http://sourceforge.jp/forum/forum.php?thread_id=29547&forum_id=9259">MacOS XのWord2008/2011</a>」は再現できる環境を持たないため未確認。</li>
+</ul>
+</li>
+</ul>
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>Debian 6, Windows 7/8/XP</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td>FontForge 0.0.20100501-5<br />    
+    Adobe Illustrator CS4</td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+<td><a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a>  <a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-120918-2.html" target="_blank">TESTFLIGHT 052</a><br/>
+  <a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.03  </td>
+</tr>
+</table>
+
+
+<h3 id="c2012-06-07">2012-06-07 (Version 2012-04-11-2)</h3>
+<ul>
+<li>MigMix
+<ul>
+<li>ライセンスを変更。これまでIPAとM+のデュアルライセンスとしてきたが、<a href="http://d.hatena.ne.jp/itouhiro/20120607" target="_blank">IPAからの提言</a>に従い、IPA単独ライセンスに変更。ttfファイルは 20120411 と同じで、README.txtとライセンスを書いたテキストファイルのみの変更。</li>
+</ul>
+</li>
+<li>Migu
+<ul>
+<li>ライセンスを変更。これまでIPAとM+のデュアルライセンスとしてきたが、<a href="http://d.hatena.ne.jp/itouhiro/20120607" target="_blank">IPAからの提言</a>に従い、IPA単独ライセンスに変更。ttfファイルは 20120411 と同じで、README.txtとライセンスを書いたテキストファイルのみの変更。</li>
+<li>[Migu 1VS/2DS] ttf配布を停止した。これまでIPAとM+とDejaVu fonts／Droid fontsライセンスのトリプルライセンスとしてきたが、DejaVu
+  fonts／Droid fontsライセンスはIPAライセンスと競合し、IPA単独ライセンスに変更できないため。</li>
+</ul>
+</li>
+</ul>
+
+
+<h3 id="c2012-04-11">2012-04-11</h3>
+<ul>
+<li>MigMix
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 048に同期。IPAゴシックは変更なし。</li>
+<li>半角カタカナの形を変更。これまではIPAゴシックのグリフだったが、M<sup>+</sup> fontsのグリフに変わった。</li>
+<li>仕様変更：これまでは「縦書き対応」としていたが、「縦書き対応は等幅フォントに限る」と変更する。「<a href="http://sourceforge.jp/forum/forum.php?thread_id=31301&forum_id=9259">一部アプリで縦書き非対応</a>」の対策。</li>
+<li>グリフ U+200B(ZERO WIDTH SPACE)、U+2060(WORD JOINER)、U+FEFF(ZERO WIDTH NO-BREAK SPACE ＆ Byte Order Mark)はこれまで存在しなかったが、幅0のglyphとして存在させる。Androidフォントとして使用時などに豆腐文字を表示させないための対策。</li>
+</ul>
+</li>
+<li>Migu
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 048に同期。IPAゴシックは変更なし。</li>
+<li>半角カタカナの形を変更。これまではIPAゴシックのグリフだったが、M<sup>+</sup> fontsのグリフに変わった。</li>
+<li>仕様変更：これまでは「縦書き対応」としていたが、「縦書き対応は等幅フォントに限る」と変更する。「<a href="http://sourceforge.jp/forum/forum.php?thread_id=31301&forum_id=9259">一部アプリで縦書き非対応</a>」の対策。</li>
+<li>グリフ U+200B(ZERO WIDTH SPACE)、U+2060(WORD JOINER)、U+FEFF(ZERO WIDTH NO-BREAK SPACE ＆ Byte Order Mark)はこれまで存在しなかったが、幅0のglyphとして存在させる。Androidフォントとして使用時などに豆腐文字を表示させないための対策。</li>
+<li>グリフ '.notdef' はこれまで存在したが、削除してみた。<!--「<a href="http://sourceforge.jp/forum/forum.php?thread_id=30620&amp;forum_id=9259">LinuxでMigu 1Mの表示がずれる件</a>」の対策。-->Windows7のＭＳ ゴシックとメイリオが notdef のglyphを持っていなかったので同じにしてみた。</li>
+<li>一部記号の文字幅を変更。「<a href="http://sourceforge.jp/forum/forum.php?thread_id=30313&forum_id=9259">U+FF5E ～ と U+301C ～等の区別について</a>」に対応。ＭＳ ゴシックとほぼ同じ仕様。</li>
+<li>半角カタカナの、半濁点・濁点を大きく（MigMixの140％）する。音引き（ー）の左端を少し斜めに上げる。</li>
+<li>[Migu 2DS] 全角ひらがな／カタカナの文字間隔を少し狭く（前回までの80％）する。</li>
+</ul>
+</li>
+<li>報告されている問題
+<ul>
+<li>「<a href="http://sourceforge.jp/forum/forum.php?thread_id=29547&forum_id=9259">MacOS XのWord2008/2011</a>」は再現できる環境を持たないため未確認。</li>
+</ul>
+</li>
+</ul>
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>Ubuntu 10.04 / Windows XP / Windows 7</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td>FontForge 0.0.20090923-2<br />Adobe Illustrator CS5</td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+<td><a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a>  <a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-120411-2.html" target="_blank">TESTFLIGHT 048</a><br/>
+  <a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.03<br />
+	<a href="http://www.google.com/webfonts/family?family=Droid+Sans" target="_blank">Droid Sans</a> Regular:Version 1.00 build 114, Bold:Version 1.00 build 113<br />
+	<a href="http://dejavu-fonts.org" target="_blank">DejaVu Sans Condensed</a> Version 2.33
+  </td>
+</tr>
+</table>
+
+
+<h3 id="c2011-10-02">2011-10-02</h3>
+<ul>
+<li>MigMix
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 043に同期。IPAゴシックは変更なし。</li>
+<li>不具合「<a href="http://sourceforge.jp/forum/forum.php?thread_id=29928&forum_id=9259">Windows7でMigMix/Miguフォントを削除できない</a>」を修正。以前のフォントを入れて削除できないときは、今回のバージョンのフォントを上書きインストールすれば削除できるようになる。</li>
+<li>不具合「<a href="http://sourceforge.jp/forum/forum.php?thread_id=30310&forum_id=9259">一部の文字の文字幅がおかしい</a>」を修正。</li>
+<li>ウェイト（太さ）の名前がすこし変化した。「MigMix 1P regular」だったのが「MigMix 1P Regular」というようにウェイトの1文字めが大文字になった。</li-->
+<li>フォントファイル名がすこし変化した。 MigMix-1P-regular.ttf だったのが migmix-1p-regular.ttf というようにすべて小文字になった。Windowsでは問題なく上書きされる。Linuxでは、前のバージョンを上書きしないので、前のバージョンのフォントをすべて削除してからインストールしたほうがよい。</li>
+<li>TTF名の言語フィールドを少し変更。</li>
+</ul>
+</li>
+<li>Migu
+<ul>
+<li>M<sup>+</sup> TESTFLIGHT 043に同期。IPAゴシックは変更なし。</li>
+<li>不具合「<a href="http://sourceforge.jp/forum/forum.php?thread_id=29928&forum_id=9259">Windows7でMigMix/Miguフォントを削除できない</a>」を修正。以前のフォントを入れて削除できないときは、今回のバージョンのフォントを上書きインストールすれば削除できるようになる。</li>
+<li>不具合「<a href="http://sourceforge.jp/forum/forum.php?thread_id=30310&forum_id=9259">一部の文字の文字幅がおかしい</a>」を修正。</li>
+<li>[Migu 1M/2M] 不具合「<a href="http://sourceforge.jp/forum/forum.php?thread_id=30480&forum_id=9259">全角オーバーライン「￣」(U+FFE3)は12pt以下で見えなくなることがある</a>」を修正。</li>
+<li>変更「<a href="http://sourceforge.jp/forum/forum.php?thread_id=30313&forum_id=9259">U+FF5E ～ と U+301C ～等の区別について</a>」に一部対応。 U+301Cの波形を逆向きにした。ほかの文字は検討中。</li>
+<li>ウェイト（太さ）の名前がすこし変化した。「Migu 1P regular」だったのが「Migu 1P Regular」というようにウェイトの1文字めが大文字になった。</li-->
+<li>フォントファイル名がすこし変化した。 Migu-1P-regular.ttf だったのが migu-1p-regular.ttf というようにすべて小文字になった。Windowsでは問題なく上書きされる。Linuxでは、前のバージョンを上書きしないので、前のバージョンのフォントをすべて削除してからインストールしたほうがよい。</li>
+<li>TTF名の言語フィールドを少し変更。</li>
+<li>[Migu 1P/1C/1M/1VS/2M/2DS] 判別しにくい文字「タ夕」のうちカタカナではないほう（漢字）の字形を一部変更した。</li>
+</ul>
+</li>
+<li>報告されている問題
+<ul>
+<li>「<a href="http://sourceforge.jp/forum/forum.php?thread_id=29547&forum_id=9259">MacOS XのWord2008/2011</a>」は再現できる環境を持たないため未確認。</li>
+<li>「<a href="http://sourceforge.jp/forum/forum.php?thread_id=31301&forum_id=9259">一部アプリで縦書き非対応</a>」の再現を確認。→仕様を変更して「等幅フォントに限り縦書き対応」とする。</li>
+</ul>
+</li>
+</ul>
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>Ubuntu 11.04 / Debian Unstable / Windows XP / Windows 7</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td>FontForge 0.0.20100501-5ubuntu2 / 0.0.20110222-1<br />Adobe Illustrator CS4</td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+<td><a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a>  <a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/2011/09/29#mplus_fonts-110929-2" target="_blank">TESTFLIGHT 043</a> (2011-10-02 11:00JSTまでの修正も含む)<br/>
+  <a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.03<br />
+	<a href="http://www.google.com/webfonts/family?family=Droid+Sans" target="_blank">Droid Sans</a> Regular:Version 1.00 build 114, Bold:Version 1.00 build 113<br />
+	<a href="http://dejavu-fonts.org" target="_blank">DejaVu Sans Condensed</a> Version 2.33
+  </td>
+</tr>
+</table>
+
+
+
+<h3 id="c2011-08-25">2011-08-25</h3>
+<ul>
+<li>MigMix
+  
+<ul>
+  
+<li>M<sup>+</sup> TESTFLIGHT 042に同期。IPAゴシックは変更なし。</li>
+<li>TTF名の言語フィールドに日本語を追加した。</li>
+</ul>
+</li>
+<li>Migu
+  
+<ul>
+  
+<li>M<sup>+</sup> TESTFLIGHT 042に同期。IPAゴシックは変更なし。</li>
+<li>TTF名の言語フィールドに日本語を追加した。</li>
+<li>[Migu 1P/1C/1M/1VS/2M/2DS] 判別しにくい文字「カ力 エ工 ロ口 ー一 ニ二 タ夕」のうちカタカナではないほう（漢字）の字形を一部変更した。ついでに漢数字の「三」も変更した。<br />
+<img src="migu/20110825differ.png" width="343" height="534" alt="カ力 エ工 ロ口 ー一 ニ二 タ夕" /></li>
+<li>[Migu 1VS] 判別しにくい文字「ヘへ ベべ ペぺ」のうちカタカナではないほう（ひらがな）の字形は、今回はM<sup>+</sup>と同じ字形に戻した。
+<!--（調整中）-->
+</li>
+<li>[Migu 1VS] 不具合「Windowsでは 'はひふへほ' の文字が表示サイズによっては欠落することがある」を修正。</li>
+</ul>
+</li>
+<li>報告されている問題
+  
+<ul>
+  
+<li>「<a href="http://sourceforge.jp/forum/forum.php?thread_id=29928&forum_id=9259">win7でMigMix 1Pの削除が出来ない</a>」の再現性は未確認。解決策として「TTF名の言語フィールドに日本語を追加」をためしに入れたが、<del>修正されたかは未確認</del>。→未解決。</li>
+<li>「MacOS Xの<a href="http://sourceforge.jp/forum/forum.php?thread_id=29547&forum_id=9259">word2008にて</a>」は再現できる環境を持たないため未確認。解決策として「TTF名の言語フィールドに日本語を追加」をためしに入れたが、修正されたかは未確認。</li>
+</ul>
+</li>
+</ul>
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>Ubuntu 11.04 / Windows XP</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td>FontForge 0.0.20100501-5ubuntu2<br />Adobe Illustrator CS4</td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+  <td><a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a>  <a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-110825-2.html" target="_blank">TESTFLIGHT 042</a><br/>
+  <a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.03<br />
+	<a href="http://www.google.com/webfonts/family?family=Droid+Sans" target="_blank">Droid Sans</a> Regular:Version 1.00 build 114, Bold:Version 1.00 build 113<br />
+	<a href="http://dejavu-fonts.org" target="_blank">DejaVu Sans Condensed</a> Version 2.33
+  </td>
+</tr>
+</table>
+
+
+
+<h3 id="c2011-06-10">2011-06-10</h3>
+<ul>
+<li>MigMix
+  <ul>
+  <li>M<sup>+</sup> TESTFLIGHT 040に同期。IPAゴシックは変更なし。</li>
+  <!--li>M<sup>+</sup>フォントに存在せず、IPAフォントから追加した漢字のリストは、鳩耳.comさんの<a href="http://xn--by0ay10d.com/mplus/">アレな漢字リスト</a> (<a href="migmix/20110608-http---xn--by0ay10d.com-mplus.html">2011-06-08キャッシュ</a>)にまとめられている。</li-->
+  </ul>
+</li>
+<li>Migu
+  <ul>
+  <li>M<sup>+</sup> TESTFLIGHT 040に同期。IPAゴシックは変更なし。</li>
+  <li>[Migu 1M/1VS] 全角英数字のゼロ「０」にスラッシュをつけた。つけたのは半角英数字にもスラッシュのある Migu 1M/1VSのみ。</li>
+  <li>[Migu 1C] 半角英数字の文字幅を修正。M<sup>+</sup>1cの文字幅修正は、前回Migu 1C文字幅を修正しているので意図的に取り入れていない。</li>
+  <li>[Migu 1C/2DS] 全角ひらがなカタカナの文字幅を修正。</li>
+  <li>[Migu 2M] 新規作成。</li>
+  <li>[Migu 1VS] 新規作成。</li>
+  <li>[Migu 1VS] Migu 1Cを元に、半角英数字を <a href="http://dejavu-fonts.org" target="_blank">DejaVu Sans Condensed</a> に置き換え。</li>
+  <li>[Migu 1VS] DejaVu Sans Condensedの「I」（大文字のアイ）の文字を小文字のエルと判別しやすいように横棒をつけた。</li>
+  <li>[Migu 1VS] DejaVu Sans Condensedの「J」の文字を小文字の「j」と判別しやすいように横棒をつけた。</li>
+  <li>[Migu 1VS] DejaVu Sans Condensedの「0」（数字のゼロ）の文字を大文字のオーと判別しやすいように斜め線をつけた。</li>
+  <li>[Migu 1VS] 判別しにくい文字「カ力 エ工 ロ口 ー一 ニ二 タ夕 ヘへ ベべ ペぺ」のうちカタカナではないほうの字形を一部変更した。今回は Migu 1VSのみに試験的に先行導入した。Migu 1P/1C/1M/2M/2DSには次回導入予定。<!--詳しくは ※ 参照。--></li>
+  </ul>
+</li>
+<li>報告されている問題
+  <ul>
+  <li>「<a href="http://sourceforge.jp/forum/forum.php?thread_id=29887&forum_id=9259">Migu 1VSでの欠落</a>」は不具合を確認しました。 次回修正予定。</li>
+  <li>「<a href="http://sourceforge.jp/forum/forum.php?thread_id=29913&forum_id=9259">MacOSXでMigu 1VSの不具合報告</a>」は再現できる環境を持たないため未確認です。おそらく一つ上の不具合を修正すれば同時に直るはず。</li>
+  <li>「<a href="http://sourceforge.jp/forum/forum.php?thread_id=29928&forum_id=9259">win7でMigMix 1Pの削除が出来ない</a>」は未確認です。</li>
+  <li>「MacOS Xの<a href="http://sourceforge.jp/forum/forum.php?thread_id=29547&forum_id=9259">word2008にて</a>」は再現できる環境を持たないため未確認です。</li>
+  </ul>
+</li>
+</ul>
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>Ubuntu 11.04 / Windows XP</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td>FontForge 0.0.20100501-5ubuntu2<br />Adobe Illustrator CS4</td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+  <td><a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a>  <a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-110608-2.html" target="_blank">TESTFLIGHT 040</a><br/>
+  <a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.03<br />
+	<a href="http://www.google.com/webfonts/family?family=Droid+Sans" target="_blank">Droid Sans</a> Regular:Version 1.00 build 114, Bold:Version 1.00 build 113<br />
+	<a href="http://dejavu-fonts.org" target="_blank">DejaVu Sans Condensed</a> Version 2.33
+  </td>
+</tr>
+</table>
+
+
+
+<h3 id="c2011-05-14">2011-05-14</h3>
+<ul>
+<li>MigMix
+  <ul>
+  <li>M<sup>+</sup> TESTFLIGHT 039に同期。</li>
+  <li>IPAゴシック Ver.003.03に更新。</li>
+  </ul>
+</li>
+<li>Migu
+  <ul>
+  <li>M<sup>+</sup> TESTFLIGHT 039に同期。</li>
+  <li>IPAゴシック Ver.003.03に更新。</li>
+  <li>[Migu 1M/1P/1C] 「一(漢数字) ー(長音記号) －(マイナス) の区別」のため、漢数字と長音記号の字形を変更した。縦書きにも対応。<br /><img src="migu/20110514prolonged.png" width="350" height="279" alt="２連続シュートで一気に３－２" /></li>
+  <li>[Migu 1P] 全角ひらがな・カタカナを、可変幅から等幅に変更した。</li>
+  <li>[Migu 1P/1C] 「 I (英大文字のアイ）」の字形と文字幅を変更。M<sup>+</sup>では単なる縦線だが、横棒つきにして、前回より横棒を大きくした。<br />
+    <img src="migu/20110514-I.png" width="422" height="178" alt="（半角）Illustration　（全角）ＩＰＡフォント" /></li>
+  <li>[Migu 1C] 半角英数字の文字幅を変更した。英文サイトを読みやすくするため、すきまを詰める方針で修正。<!--br />
+<img src="migu/t-migu-linux-jquery.gif" width="240" height="135" alt="英文サイト FontForge" /--></li>
+  <li>[Migu 1C] 全角ひらがな・カタカナ（可変幅）の文字幅を、より自然に見えるように修正。</li>
+  <li>[Migu 2DS] 新規作成。</li>
+  <li>[Migu 2DS] MigMix 2Pを元に、半角英数字を <a href="http://www.google.com/webfonts/family?family=Droid+Sans" target="_blank">Droid Sans</a> に置き換え。</li>
+  <li>[Migu 2DS] Droid Sansの「J」の文字を小文字と判別しやすいように横棒をつけた。</li>
+  <li>[Migu 2DS] 全角ひらがな・カタカナを可変幅にした。</li>
+  </ul>
+</li>
+</ul>
+
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>Ubuntu 10.10 / Windows XP</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td>FontForge 0.0.20090923-2ubuntu1<br />Adobe Illustrator CS4</td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+  
+<td><a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a>  <a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-110513-2.html" target="_blank">TESTFLIGHT 039</a><br/>
+  <a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.03, ipag00303.zip<br />
+	<a href="http://www.google.com/webfonts/family?family=Droid+Sans" target="_blank">Droid Sans</a> Regular:Version 1.00 build 114, Bold:Version 1.00 build 113
+</td>
+</tr>
+</table>
+
+
+<h3 id="c2011-04-18">2011-04-18</h3>
+<ul>
+<li>MigMix
+  <ul>
+  <li>M<sup>+</sup> TESTFLIGHT 038に同期。IPAゴシックは変更なし。</li>
+  </ul>
+</li>
+<li>Migu
+  <ul>
+  <li>M<sup>+</sup> TESTFLIGHT 038に同期。IPAゴシックは変更なし。</li>
+  <li>[Migu 1M] <a href="http://sourceforge.jp/forum/forum.php?thread_id=28662&amp;forum_id=9259" target="_blank">Ambiguous文字</a>のうちIPAゴシックで全角のものについて、全角に変更した。<br />
+ユニコード変換表による相違も考慮した。<a href="migu/ambiguous20110418_utf8.html">検証HTML</a>に、具体的に全角にした文字を掲載。<br />
+<img src="migu/ambiguous20110418.gif" width="377" height="334" alt="Ambiguous" /></li>
+  <li>[Migu 1M] 行間を少し広げる。gとjの字形（下端の座標 -230）が欠けないように、WinDescent,HHeadDescentをIPAゴシックと同じ 196 から、230 に変更。</li>
+  <li>[Migu 1M] 「 ~ （チルダ U+007E）」の字形をハイフンと区別つけやすいように変更。</li>
+  <li>[Migu 1C] 新規作成。</li>
+  <li>[Migu 1P/1C] 「 I （大文字のアイ）」の字形と文字幅を変更。M<sup>+</sup>では単なる縦線だが、横棒つきにして、前回より横棒を小さくした。</li>
+  <li>[Migu 1P/1C] 「 ・ （中黒 U+30FB）」の文字幅を少し狭く。 '<a href="http://ja.wikipedia.org/wiki/%E3%83%93%E3%83%BC%E3%83%88%E3%83%AB%E3%82%BA">ビートルズ - Wikipedia</a>' など読みやすくするため。</li>
+  <li>[Migu 1P/1C] 半角英数字に関して、カーニング情報とベアリング（文字の横方向のアキ）に関してはデフォルトに戻した。</li>
+  </ul>
+</li>
+</ul>
+
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>Ubuntu 10.10 / Windows XP</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td>FontForge 0.0.20090923-2ubuntu1<br />Adobe Illustrator CS4</td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+  
+<td><a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/">M<sup>+</sup> アウトラインフォント</a>  <a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-110418-2.html" target="_blank">TESTFLIGHT 038</a><br/>
+<a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.02</td>
+</tr>
+</table>
+
+
+<h3 id="c2011-02-07">2011-02-07</h3>
+<ul>
+<li>MigMix ／ Migu 共通
+  <ul>
+  <li>M<sup>+</sup> TESTFLIGHT 036に追従。IPAゴシックは変更なし。</li>
+  <li>MigMix ／ Miguフォントをまとめて1コマンドでビルドできるスクリプトを開発した。M<sup>+</sup>のソースに追加してビルドする形式。<a href="http://sourceforge.jp/cvs/view/mix-mplus-ipa/mixfont-mplus-ipa/" target="_blank">CVS Repository</a>で公開した。</li>
+  <li>文字の修正はAdobe Illustratorでおこない、本家 M<sup>+</sup>と同じくai, svg形式で提供するようにした。</li>
+  </ul>
+</li>
+<li>Migu
+  <ul>
+  <li>初公開。</li>
+  <li>[Migu 1P] [Migu 1M] 半濁点を大きくして、濁点と判別しやすくした。</li>
+  <li>[Migu 1P] 全角ひらがな・カタカナ・役物（「」『』【】の6文字）を可変幅に変更。</li>
+  <li>[Migu 1P] 英文字アイの大文字 I を横棒つきに変更した。小文字エルとの識別しやすさのため。</li>
+  <li>[Migu 1P] カーニングの効かないWebブラウザ表示で Wと次の文字の空間があいているのが気になって、文字間を狭めてカーニング情報もあわせて変更したが、ほぼ効果がなかった。とりあえず修正はいれておく。</li>
+  <li>[Migu 1M] 行間をせまくして、以前の M+1VM+IPAG circleとまったく同じにした。</li>
+  <li>[Migu 1M] 半角数字の 0 の斜め線を少し細くした。</li>
+  <li>[Migu 1M] MigMix 1Pで全角の ← u2190, ↑ u2191, → u2192, ↓ u2193 の4文字が MigMix 1Mでは半角になっていたので、Migu 1Mでは全角にした。</li>
+  </ul>
+</li>
+</ul>
+
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>Ubuntu 10.10 / Windows XP</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td>FontForge 0.0.20090923-2ubuntu1<br />Adobe Illustrator CS4</td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+  
+<td><a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a>  <a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/mplus_fonts/mplus_fonts-110204-2.html" target="_blank">TESTFLIGHT 036</a><br/>
+  cvs -z3 -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/mplus-fonts checkout -D &quot;2011-02-04 21:40:00 JST&quot; mplus_outline_fonts
+  </td>
+</tr>
+<tr>
+  <td><a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.02<br/>ipag00302.zip</td>
+</tr>
+</table>
+
+
+<h3 id="c2011-01-21">2011-01-21</h3>
+<ul>
+<li>MigMix
+  <ul>
+  <li>M<sup>+</sup> TESTFLIGHT 035 (2011-01-19までの追加文字も含む) に追従。IPAゴシックは変更なし。</li>
+  <li><a href="http://mplus-fonts.sourceforge.jp/cgi-bin/blosxom.cgi/2011/01/19#mplus_fonts-110119-2">ボールド体の扱い</a>を、TESTFLIGHT 034以前の方法に戻している。    </li>
+  <li>縦書きに対応。M<sup>+</sup> TESTFLIGHT 035の成果。</li>
+  <li>emのサイズを M<sup>+</sup>に合わせて、1000unit に変更。</li>
+  <li>バージョンは数字のみを含むようにした。FontForgeのみ使用してフォント生成。</li>
+  <li>フォント生成方法を変更。sfdからTrueTypeを生成する。</li>
+  <li>Perlのマルチスレッド関連モジュールがないのでRedHatLinux9でビルドできなくなったため、環境をUbuntu10に変更。</li>
+  </ul>
+</li>
+</ul>
+
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>Ubuntu 10.10</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td>FontForge (<a href="http://fontforge.sourceforge.net/">http://fontforge.sourceforge.net/</a>)
+    <ul>
+    <li>0.0.20090923-2ubuntu1</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+  <td><a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a>  TESTFLIGHT 035 (2011-01-19までの追加文字も含む)<br/>
+cvs -z3 -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/mplus-fonts checkout -D &quot;2011-01-19 23:11:00 JST&quot; mplus_outline_fonts
+  </td>
+</tr>
+<tr>
+  <td><a href="http://ossipedia.ipa.go.jp/ipafont/">IPAゴシック</a> Ver.003.02<br/>ipag00302.zip</td>
+</tr>
+</table>
+
+<h3 id="c2010-06-12">2010-06-26</h3>
+<ul>
+<li>MigMix
+  <ul>
+  <li>初公開。</li>
+  <li>M<sup>+</sup> TESTFLIGHT 030 に追従。IPAゴシックはそのときの最新版 Ver.003.02。</li>
+  <li>合成方法は、M<sup>+</sup>フォントに付属する m++ipa.pe スクリプトを少し改変して使用した。</li>
+  <li>m++ipa.pe スクリプトの動作により、emのサイズがIPAフォントにあわせて 2048になっている。</li>
+  <li>IPAフォントのボールド体生成とフォント名修正に、Windowsを使用。</li>
+  </ul>
+</li>
+</ul>
+
+<table class="log">
+<tr>
+  <th>OS</th>
+  <td>Windows XP／Red Hat Linux 9</td>
+</tr>
+<tr>
+  <th>ソフト</th>
+  <td>FontForge (<a href="http://fontforge.sourceforge.net/ja/">http://fontforge.sourceforge.net/ja/</a>, <a href="http://www.geocities.jp/meir000/fontforge/">unofficial fontforge-mingw</a>)
+    <ul>
+    <li>fontforge-20090923-1.i386.rpm</li>
+    <li>fontforge-mingw_2009_10_28.zip</li>
+    </ul>
+  </td>
+</tr>
+<tr>
+  <th rowspan="2">ソース</th>
+  <td><a href="http://mplus-fonts.sourceforge.jp/mplus-outline-fonts/">M<sup>+</sup>アウトラインフォント</a> TESTFLIGHT 030<br/>
+  mplus-TESTFLIGHT-030.tar.gz<br/>
+  cvs -z3 -d:pserver:anonymous@cvs.sourceforge.jp:/cvsroot/mplus-fonts checkout -D &quot;2010-04-29 00:00:00 JST&quot; mplus_outline_fonts
+  </td>
+</tr>
+<tr>
+  <td><a href="http://ossipedia.ipa.go.jp/ipafont/">IPAフォント</a> Ver.003.02<br/>IPAfont00302.zip</td>
+</tr>
+</table>
+
+<h3 id="c2010">以前のバージョン</h3>
+<p>これより以前のバージョン：<a href="mplus2006_ipa2003/" rel="nofollow">M<sup>+</sup>2006＋IPA2003</a></p>
+
+
+<!--/#contents--></div>
+
+<div id="totop">
+<a href="#top">ページのトップへ戻る</a>
+<!--/#totop--></div>
+
+<div id="footer">
+<span class="update">更新 <!-- #BeginDate format:IS1 -->2023-11-25<!-- #EndDate --></span>
+<address>&copy; itouhiro</address>
+<!--/#footer--></div>
+
+<!--/#top--></div>
+</body>
+</html>

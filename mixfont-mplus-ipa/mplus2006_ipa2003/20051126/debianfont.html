@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Debian GNU/Linux 3.1 の TrueType フォント設定 | きりんシステム</title>
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <link rel="stylesheet" type="text/css" href="reset.css"/>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+<div id="container">
+
+<div id="header">
+  <a id="header_msg" href="../../../">きりんシステム</a>
+<!--/header-->
+</div>
+
+<div id="article">
+
+<div id="tagline">
+<div class="msg"><a href="../../../tag/">フォント</a></div>
+<!--/tagline--></div>
+
+<div class="section">
+<h1>Debian GNU/Linux 3.1 の TrueType フォント設定</h1>
+<p class="entryinfo">2005年11月26日</p>
+<!--/section h1--></div>
+
+<p>Debian GNU/Linux 3.1 (sarge) に新規TrueTypeフォントを追加するには、</p>
+
+<pre><code>$ mkdir ~/.fonts
+$ cp *ttf ~/.fonts/
+$ fc-cache
+</code></pre>
+
+<p>で できます。このあとで Firefox 等の設定でそのフォントを選ぶだけで
+表示できます。
+しかしそのままだとボールド(太字)が太くならず、普通の文字と同じに表示されます。</p>
+
+<p><img src="20051126_0.png" width="789" height="174"  alt="no bold in Debian3.1"/></p>
+
+<p><a href="http://blogs.itmedia.co.jp/oreore/2005/10/fedora_core__fe_ca95.html" title="「ボールドが出たッ！Fedora Core編完！」「ほ～お、それでほかのやり残したネタはどうするんだ？」 ～Fedora Coreと日本語フォント完結（？）編? - 俺の話を聞け！ [ITmedia オルタナティブ・ブログ]">Fedora Coreと日本語フォント - ITmedia オルタナティブ・ブログ</a> によると、</p>
+
+<blockquote>
+    <p>　最新バージョンのXft 2.1.7とfreetype 2.1.10、fontconfig 2.2.3では、「日本語フォント（というかボールド情報を持っていないフォント）でボールドがでない」という問題はすでに解決されており、その3つの組み合せでは正しく日本語フォントでボールドフォントが表示される。</p>
+</blockquote>
+
+<p>とのことですが、Debian3.1ではその設定でボールドになりません。
+調べてみると、</p>
+
+<pre><code>$ dpkg -l | grep font
+ii  fontconfig     2.3.1-2        generic font configuration library
+ii  libfreetype6   2.1.7-2.4      FreeType 2 font engine, shared library files
+ii  libxft2        2.1.7-1        FreeType-based font drawing library for X
+</code></pre>
+
+<p>ということで freetype のバージョンが低いためボールドが出ないようです。</p>
+
+<p>解決策としては freetype のバージョンを上げる方法もありますが、Debianのパッケージ管理をまだよく分かっていないので、バージョンを上げずに別の方法を模索します。</p>
+
+<p><a href="http://debian.fam.cx/index.php?Japanese#u642c87f" title="Japanese - Debian GNU/Linux スレッドテンプレ">日本語 TrueType フォントで太字 (Bold) が表示されない - Debian GNU/Linux スレッドテンプレ</a> によれば、<code>~/.fonts.conf</code> を書けば 太字フォントに別のフォントを割り当てることができるそうです。</p>
+
+<p>リンク先の設定をそのまま試したところ、私の予想した結果と異なりました。</p>
+
+<ul>
+<li>通常フォント名: Anito-M-Mono (アニトM等幅)</li>
+<li>太字フォント名: RgPGothic-Bd (リョービ PゴシックB)</li>
+</ul>
+
+<p>私は上記の組み合わせで試して、FirefoxでWebページを表示するのはボールドとふつうフォントが使い分けらることはできました。しかし、コンソール(mlterm)でも使い分けられてしまい困ってしまいました。コンソールでは可変幅フォントが使われると文字が欠けまくるためです。</p>
+
+<p>私の希望する条件は下記のようになります。</p>
+
+<ul>
+<li>sans-serif (可変幅) のときは 1)ボールドなら リョービPGothic, 2)非ボールドならアニト</li>
+<li>monospace (等幅) のときはいつでもアニト</li>
+</ul>
+
+<p>この設定を実現する <code>.fonts.conf</code> の書式を調べました。
+<code>man fonts-conf</code> とか
+<a href="http://fontconfig.org/fontconfig-user.html" title="fonts-conf">fonts-conf</a>
+や
+<a href="http://wiki.fdiary.net/font/?unixuser200403-2#l5" title="書体関係 Wiki - X でのフォント設定">Xft フォントシステムの設定</a>
+を読むことである程度分かりました。</p>
+
+<p>結局私の設定は下記のようになりました。</p>
+
+<h2>通常とボールド(太字)のフォントを使い分ける設定</h2>
+
+<p><code>~/.fonts.conf</code></p>
+
+<pre><code>&lt;?xml version="1.0"?&gt;
+&lt;!DOCTYPE fontconfig SYSTEM "fonts.dtd"&gt;
+&lt;fontconfig&gt;
+&lt;match target="pattern"&gt;
+  &lt;test name="family" compare="eq"&gt;
+    &lt;string&gt;sans-serif&lt;/string&gt;
+  &lt;/test&gt;
+  &lt;test name="weight" compare="more"&gt;
+    &lt;const&gt;medium&lt;/const&gt;
+  &lt;/test&gt;
+  &lt;edit name="family" mode="prepend"&gt;
+    &lt;string&gt;RgPGothic-Bd&lt;/string&gt;
+  &lt;/edit&gt;
+&lt;/match&gt;
+&lt;match target="pattern"&gt;
+  &lt;test name="family" compare="eq"&gt;
+    &lt;string&gt;sans-serif&lt;/string&gt;
+  &lt;/test&gt;
+  &lt;test name="weight" compare="less_eq"&gt;
+    &lt;const&gt;medium&lt;/const&gt;
+  &lt;/test&gt;
+  &lt;edit name="family" mode="prepend"&gt;
+    &lt;string&gt;Anito-M-Mono&lt;/string&gt;
+  &lt;/edit&gt;
+&lt;/match&gt;
+&lt;match target="pattern"&gt;
+  &lt;test name="family" compare="eq"&gt;
+    &lt;string&gt;monospace&lt;/string&gt;
+  &lt;/test&gt;
+  &lt;edit name="family" mode="prepend"&gt;
+    &lt;string&gt;Anito-M-Mono&lt;/string&gt;
+  &lt;/edit&gt;
+&lt;/match&gt;
+&lt;/fontconfig&gt;
+</code></pre>
+
+<p>XML なので少し分かりにくいですが、普通のプログラム言語ふうに書くと</p>
+
+<pre><code>if (family == "sans-serif" and weight &gt; medium){
+    family = "RgPGothic-Bd"
+}
+if (family == "sans-serif" and weight &lt;= medium){
+    family = "Anito-M-Mono"
+}
+if (family == "monospace"){
+    family = "Anito-M-Mono"
+}
+</code></pre>
+
+<p>のような意味です。(prepend は厳密には assign とはちがいますが…)</p>
+
+<p>この設定したあとで Firefox でこのフォントを使うためには、
+フォント名(アニトとか)を直接選ばず sans-serif や monospace という
+フォントを選んでおく必要があります。</p>
+
+<p><img src="20051126_1.png" width="733" height="391"  alt="font rendering in Win2000/WinXP/Debian3.1"/></p>
+
+<p>Debian 3.1ではフォントのレンダリングがgoodです(サブピクセルレンダリングはオフ)。
+まったく同じフォントを使っているのですが、
+Windows2000のアンチエイリアスや WindowsXPのクリアタイプよりもきれいに見えます。
+WindowsXPはどうしてこうギザギザになるんだろうか？</p>
+
+<p>そのほかの
+Debian GNU/Linux 3.1 (sarge) のセットアップ方法の記録です。</p>
+
+<h2>コンソールでキー配置を変更したい (CapsLockキーを Ctrl にする)</h2>
+
+<p><code>/etc/console-tools/remap</code></p>
+
+<pre><code>s/keycode  58 = Caps_Lock/keycode  58 = Control/;
+/keycode  27 = Meta_braceleft/a        control keycode 27 = Escape
+</code></pre>
+
+<h2>X でキー配置を変更したい (CapsLockキーを Ctrl にする)</h2>
+
+<p><code>~/.Xmodmap</code></p>
+
+<pre><code>remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Caps_Lock = Control_L
+add Control = Control_L
+</code></pre>
+
+<p><code>~/.xsession</code> に <code>xmodmap ~/.Xmodmap</code> を追加。</p>
+
+<h2>mlterm でアニトフォントを使いたい</h2>
+
+<p><code>~/.mlterm/main</code></p>
+
+<pre><code>" font
+fontsize=16
+use_anti_alias=true
+use_variable_column_width=false
+" color
+fg_color=white
+bg_color=#000011
+</code></pre>
+
+<p><code>~/.mlterm/aafont</code></p>
+
+<pre><code>"ISO8859_1=Bitstream Vera Sans Mono-iso8859-1:90;
+ISO8859_1=Anito M Mono-iso8859-1:100;
+JISX0201_ROMAN=Anito M Mono-iso10646-1:100;
+JISX0201_KATA=Anito M Mono-iso10646-1:100;
+JISX0208_1983=Anito M Mono-iso10646-1:100;
+JISX0208_1990=Anito M Mono-iso10646-1:100;
+ISO10646_UCS2_1_BIWIDYH=Anito M Mono-iso10646-1:100;
+ISO10646_UCS2_1=Anito M Mono-iso10646-1:100;
+ISO10646_UCS4_1=Anito M Mono-iso10646-1:100;
+ISO10646_UCS4_1_BIWIDTH=Anito M Mono-iso10646-1:100;
+</code></pre>
+
+<h2>コンソールで Beep音を鳴らさないようにしたい</h2>
+
+<p>以前PCを自作したときにはブザー用のスピーカーをつながないという方法で
+Beepを出さなくしていましたが、その方法ができないPCもあります。そのときは…</p>
+
+<p><a href="http://homepage2.nifty.com/ssfu/others/computer/linux_silence.html" title="ブザーの鳴らないLinuxマシン(Beepオフ)">ブザーの鳴らないLinuxマシン(Beepオフ)</a> を参照。</p>
+
+<p><code>~/.inputrc</code></p>
+
+<pre><code>set bell-style none
+</code></pre>
+
+<p>vi の静音化はできなかった。</p>
+
+<h2>X で Beep音を鳴らさないようにしたい</h2>
+
+<p><code>~/.xsession</code> に <code>xset b off</code> を追加。</p>
+
+<!--table class="aff"><tr><td rowspan="2"><a href="http://www.amazon.co.jp/dp/4798102865"><img alt="item" src="http://ecx.images-amazon.com/images/I/51WK5BFV7EL._SL160_.jpg" width="124" height="160" /></a></td><td><a href="http://www.amazon.co.jp/dp/4798102865">Debian GNU/Linux徹底入門第3版 Sarge対応</a><br/><br/>作者：武藤 健志<br/>出版社／メーカー：翔泳社<br/>発売日：2005-08-04<br/>メディア：大型本</td></tr><tr><td><br/>おすすめ度の平均: <img src="http://images-jp.amazon.com/images/G/09/x-locale/common/customer-reviews/stars-5-0.gif" width="64" height="12"/><br/><img src="http://images-jp.amazon.com/images/G/09/x-locale/common/customer-reviews/stars-5-0.gif" width="64" height="12"/> この本はお勧めです。</td></tr></table-->
+<hr>
+
+<p class="entryinfo">Posted on <a href="http://ai11.net/2005/11/26/">2005年11月26日</a></p>
+<p class="tag"><a href="../../../tag/font/">フォント</a>, <a href="../../../tag/linux/">Linux</a></p>
+
+<!--/article--></div>
+
+
+<div id="aside">
+<!--/aside--></div>
+
+
+<div id="footer">
+<div class="msg">&copy;  <a href="../../../">きりんシステム</a></div>
+<!--/footer--></div>
+
+
+<!--/container--></div>
+</body>
+</html>
